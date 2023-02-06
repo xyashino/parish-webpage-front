@@ -5,8 +5,10 @@ interface Props extends Omit<HTMLAttributes<HTMLDivElement>, "className"> {
   className?: string;
 }
 export const Divider = ({ horizontal, value, className, ...props }: Props) => {
-  const tailwindStyles = `divider ${horizontal ? "divider-horizontal" : ""} 
-      ${className ? className : ""}`.trim();
+  const tailwindStyles = `divider mb-0 ${
+    horizontal ? "divider-horizontal" : ""
+  } 
+      ${className ? className : ""}`;
   return (
     <div className={tailwindStyles} {...props}>
       {value && ""}

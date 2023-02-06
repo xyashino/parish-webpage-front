@@ -31,7 +31,7 @@ export const InteractiveMenu = ({ menu, children }: Props) => {
       <div className="card  w-full">
         <Menu items={menuCopy} onClick={changeBody} />
       </div>
-      <div className="px-4 pb-4">{children}</div>
+      <div className="pb-4 lg:px-4">{children}</div>
     </MenuContext.Provider>
   );
 };
