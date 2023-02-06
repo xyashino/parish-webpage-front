@@ -25,6 +25,6 @@ module.exports = {
   },
   rules: {
     // Add your own rules here to override ones from the extended configs.
-    "import/resolver": "off",
+    "import/no-unresolved": 0,
   },
 };
