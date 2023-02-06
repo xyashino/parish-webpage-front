@@ -26,7 +26,9 @@ export const ContactItem = ({ children, value, title }: Props) => {
         <h2 className="col-start-2 place-self-start text-2xl font-bold">
           {title}
         </h2>
-        <p className="col-span-2 col-start-2 place-self-start">{value}</p>
+        <p className="col-span-2 col-start-2 place-self-start text-left">
+          {value}
+        </p>
       </div>
     </div>
   );

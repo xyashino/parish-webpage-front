@@ -1,12 +1,12 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import React from "react";
+import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import { TextCard } from "@components/ui/TextCard";
 
 export const Priesthood = () => {
   return (
     <>
       <ArticleImgHeader title="Kapłaństwo" />
-      <div className="text-left text-xl">
+      <div className="text-left ">
         <blockquote>
           Sakrament święceń jest sakramentem, dzięki któremu posłanie,
           powierzone przez Chrystusa Apostołom, nadal jest spełniane w Kościele

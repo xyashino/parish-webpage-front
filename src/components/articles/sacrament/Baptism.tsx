@@ -6,11 +6,11 @@ export const Baptism = () => {
   return (
     <>
       <ArticleImgHeader title="Chrzest" />
-      <blockquote className="upperase text-xl">
+      <blockquote className="upperase ">
         Idźcie więc i nauczajcie wszystkie narody,udzielając im chrztu w imię
-        Ojca i Syna, i Ducha Świętego. Uczcie je zachowywać wszystko, co wam
-        przykazałem.A oto Ja jestem z wami przez wszystkie dni, aż do skończenia
-        świata.
+        Ojca i Syna, i Ducha Świętego. Uczcie je zachowywać wszystko, co wam
+        przykazałem. A oto Ja jestem z wami przez wszystkie dni, aż do
+        skończenia świata.
         <br />
         (Mt 28, 19-20)
       </blockquote>
@@ -100,7 +100,7 @@ export const Baptism = () => {
       <h2 className="text-3xl">Rodzicami chrzestnymi nie mogą być:</h2>
       <ArticleList order>
         <li>Osoby niewierzące lub innej wiary</li>
-        <li>Osoby "niepraktykujące"</li>
+        <li>Osoby &quot;niepraktykujące&quot;</li>
         <li>Żyjący na kontrakcie cywilnym lub bez żadnego ślubu</li>
         <li>Nie bierzmowani i nie uczestniczący w katechezie szkolnej</li>
         <li>Prowadzący gorszący tryb życia</li>
@@ -109,17 +109,19 @@ export const Baptism = () => {
       <Divider />
 
       <blockquote className="mb-8 text-xl">
-        "Niektórzy myślą: "ale po co chrzcić dziecko, które tego nie rozumie?
-        Poczekajmy aż dorośnie, zrozumie i samo poprosi o chrzest". Ale to
-        oznacza brak ufności w Ducha Świętego. Kiedy chrzcimy dziecko,wchodzi do
-        niego Duch Święty i to on sprawia, że rosną w nim cnoty chrześcijańskie,
-        które potem rozkwitną. Zawsze należy dać szansę wszystkim dzieciom na
-        to,aby miały w sobie Ducha Świętego, który będzie je prowadził w życiu".
+        &quot;Niektórzy myślą: &quot;ale po co chrzcić dziecko, które tego nie
+        rozumie? Poczekajmy aż dorośnie, zrozumie i samo poprosi o
+        chrzest&quot;. Ale to oznacza brak ufności w Ducha Świętego. Kiedy
+        chrzcimy dziecko,wchodzi do niego Duch Święty i to on sprawia, że rosną
+        w nim cnoty chrześcijańskie, które potem rozkwitną. Zawsze należy dać
+        szansę wszystkim dzieciom na to,aby miały w sobie Ducha Świętego, który
+        będzie je prowadził w życiu&quot;.
         <br />
         <a
-          className="p-2 text-2xl italic"
+          className="my-4 p-2 text-2xl italic"
           target="_blank"
           href="https://pl.wikipedia.org/wiki/Franciszek_(papie%C5%BC)"
+          rel="noreferrer"
         >
           Ojciec Święty Franciszek
         </a>

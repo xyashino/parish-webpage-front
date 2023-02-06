@@ -1,3 +1,4 @@
+import React from "react";
 import { Divider } from "@components/ui/Divider";
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 export const CouncilList = ({ items, title }: Props) => {
   return (
     <>
-      <table className="table-zebra my-8 table w-3/5 shadow-md">
+      <table className="table-zebra my-8 table w-5/6 shadow-md lg:w-3/5">
         <thead>
           <tr>
             <th colSpan={2} className="bg-primary text-center">
@@ -18,7 +19,7 @@ export const CouncilList = ({ items, title }: Props) => {
         </thead>
         <tbody className="text-center font-bold">
           {items.map((el, i) => (
-            <tr>
+            <tr key={i}>
               <td className="px-4">{i + 1}.</td> <td>{el}</td>
             </tr>
           ))}

@@ -42,12 +42,6 @@ export const SacramentMenu: MenuItem[] = [
     image: PenanceImage,
   },
   {
-    title: "Namaszczenie chorych",
-    article: <Anointing />,
-    active: false,
-    image: AnointingImage,
-  },
-  {
     title: "Kapłaństwo",
     article: <Priesthood />,
     active: false,
@@ -58,5 +52,11 @@ export const SacramentMenu: MenuItem[] = [
     article: <Marriage />,
     active: false,
     image: MarriageImage,
+  },
+  {
+    title: "Namaszczenie chorych",
+    article: <Anointing />,
+    active: false,
+    image: AnointingImage,
   },
 ];

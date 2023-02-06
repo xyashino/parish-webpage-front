@@ -8,12 +8,11 @@ interface Props {
 }
 
 export const BackgroundImage = ({ image, divider }: Props) => {
+
   return (
     <>
       <section
-        className={`max-w-screen relative    flex h-[30vh] w-full  bg-cover bg-fixed bg-center  lg:h-[50vh] bg-${
-          image ?? "bannerImage"
-        }`}
+        className={`max-w-screen relative flex h-[30vh] w-full  bg-cover bg-scroll lg:bg-fixed bg-center  lg:h-[65vh]`}
         style={{
           backgroundImage: `url(${image ?? Image})`,
         }}

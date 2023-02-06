@@ -1,4 +1,4 @@
-import { HTMLAttributes, PropsWithChildren } from "react";
+import React, { HTMLAttributes, PropsWithChildren } from "react";
 
 interface Props
   extends PropsWithChildren,
@@ -9,7 +9,7 @@ interface Props
 export const TextCard = ({ children, className, onlyMyClasses }: Props) => {
   const cardClasses = onlyMyClasses
     ? className
-    : `m-8 rounded bg-neutral p-8 text-left uppercase text-base-100 shadow-md  leading-relaxed ${
+    : `my-4 grow lg:my-8 rounded bg-neutral p-8 text-left uppercase text-base-100 shadow-md  leading-relaxed ${
         className ? className : ""
       }`;
   return <div className={cardClasses}>{children}</div>;

@@ -1,13 +1,11 @@
 import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import React from "react";
-import { PageRouter } from "@enums/page-router.enum";
-import { Link } from "react-router-dom";
 
 export const Eucharist = () => {
   return (
     <>
       <ArticleImgHeader title="Eucharystia" />
-      <div className="p-4 text-left text-xl">
+      <div className="p-4 text-left ">
         <blockquote>
           Eucharystia jest źródłem i zarazem szczytem całego życia
           chrześcijańskiego, tak że nie da się prowadzić życia chrześcijańskiego
@@ -37,20 +35,20 @@ export const Eucharist = () => {
           przetrwała nienaruszona przez wieki aż do naszych czasów. Stanowi
           centrum życia Kościoła.
         </p>
-        <div className="flex w-full justify-around">
-          <Link
-            to={PageRouter.Intentions}
-            className="underline-none btn-primary btn-wide btn font-bold text-base-100  no-underline"
-          >
-            Intencje
-          </Link>
-          <Link
-            to={PageRouter.Services}
-            className="btn-primary btn-wide btn font-bold text-base-100 no-underline"
-          >
-            NABOŻEŃSTWA{" "}
-          </Link>
-        </div>
+        {/*<div className="flex grow justify-around">*/}
+        {/*  <Link*/}
+        {/*    to={PageRouter.Intentions}*/}
+        {/*    className="underline-none btn-primary btn-wide btn font-bold text-base-100  no-underline"*/}
+        {/*  >*/}
+        {/*    Intencje*/}
+        {/*  </Link>*/}
+        {/*  <Link*/}
+        {/*    to={PageRouter.Services}*/}
+        {/*    className="btn-primary btn-wide btn font-bold text-base-100 no-underline"*/}
+        {/*  >*/}
+        {/*    NABOŻEŃSTWA{" "}*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
       </div>
     </>
   );

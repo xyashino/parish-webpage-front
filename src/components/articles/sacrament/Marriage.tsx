@@ -9,7 +9,7 @@ export const Marriage = () => {
     <>
       <ArticleImgHeader title="Małżeństwo" />
       <div className="flex flex-col items-center">
-        <blockquote className="text-xl">
+        <blockquote>
           Przymierze małżeńskie, przez które mężczyzna i kobieta stanowią między
           sobą wewnętrzną wspólnotę życia i miłości, powstało z woli Stwórcy,
           który wyposażył je we własne prawa. Z natury jest ono nastawione na
