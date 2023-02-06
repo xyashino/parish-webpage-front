@@ -1,9 +1,9 @@
 import React from "react";
 import { MenuItem } from "../types/menu-item.interface";
-import RosaryImage from "@assets/groups/rozaniec.jpg";
-import MariaImage from "@assets/groups/maryja.jpg";
-import CaritasImage from "@assets/groups/caritas.jpg";
-import AlatrImage from "@assets/groups/oltarz.jpg";
+import RosaryImage from "@assets/groups/rozaniec.webp";
+import MariaImage from "@assets/groups/maryja.webp";
+import CaritasImage from "@assets/groups/caritas.webp";
+import AltarImage from "@assets/groups/oltarz.webp";
 import { AltarService } from "@components/articles/groups/AltarService";
 import { Rosary } from "@components/articles/groups/Rosary";
 import { MarianService } from "@components/articles/groups/MarianService";
@@ -14,7 +14,7 @@ export const GroupsMenu: MenuItem[] = [
     title: "Liturgiczna Służba Ołtarza",
     article: <AltarService />,
     active: true,
-    image: AlatrImage,
+    image: AltarImage,
   },
   {
     title: "Dziewczęca Służba Maryjna",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider } from "@components/ui/Divider";
-import Image from "@assets/default/backgroundImage.png";
+import Image from "@assets/default/backgroundImage.webp";
 
 interface Props {
   image?: string;
@@ -8,11 +8,10 @@ interface Props {
 }
 
 export const BackgroundImage = ({ image, divider }: Props) => {
-
   return (
     <>
       <section
-        className={`max-w-screen relative flex h-[30vh] w-full  bg-cover bg-scroll lg:bg-fixed bg-center  lg:h-[65vh]`}
+        className={`max-w-screen relative flex h-[30vh] w-full  bg-cover bg-scroll bg-center lg:h-[65vh]  lg:bg-fixed`}
         style={{
           backgroundImage: `url(${image ?? Image})`,
         }}

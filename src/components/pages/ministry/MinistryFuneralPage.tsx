@@ -1,7 +1,7 @@
+import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { Header } from "@components/ui/Header";
 import { TextCard } from "@components/ui/TextCard";
-import React from "react";
 import { InfoAlert } from "@components/InfoAlert";
 
 export const MinistryFuneralPage = () => {

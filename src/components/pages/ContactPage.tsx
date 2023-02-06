@@ -7,7 +7,7 @@ import { Email } from "@icons/Email";
 import { Bank } from "@icons/Bank";
 import { Divider } from "@components/ui/Divider";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
-import Image from "@assets/kontakt.png";
+import Image from "@assets/kontakt.webp";
 
 const IconStyle = "center center row-span-2 mr-2 place-self-center text-6xl";
 

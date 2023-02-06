@@ -1,5 +1,6 @@
+import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
-import Image from "@assets/main/kolbe1-300x298.png";
+import Image from "@assets/main/kolbe.webp";
 export const ParishPatronPage = () => {
   return (
     <WhiteBoard>

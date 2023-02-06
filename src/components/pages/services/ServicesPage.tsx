@@ -1,8 +1,9 @@
+import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { TextCard } from "@components/ui/TextCard";
 import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
-import Image from "@assets/nabozenstwa.png";
+import Image from "@assets/nabozenstwa.webp";
 
 export const ServicesPage = () => {
   return (

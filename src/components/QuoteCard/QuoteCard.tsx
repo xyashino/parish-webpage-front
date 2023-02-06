@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "@assets/main/kolbe1-300x298.png";
+import Image from "@assets/main/kolbe.webp";
 import { Quote } from "./Quote";
 import { getRandomInt } from "@utils/random-number";
 import { Card } from "@components/ui/Card";

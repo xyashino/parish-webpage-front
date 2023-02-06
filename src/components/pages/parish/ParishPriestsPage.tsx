@@ -3,7 +3,7 @@ import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { ArticleList } from "@components/Article/ArticleList";
 import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
-import Image from "@assets/parafia-proboszczowie.jpg";
+import Image from "@assets/parafia-proboszczowie.webp";
 export const ParishPriestsPage = () => {
   return (
     <WhiteBoard article>
