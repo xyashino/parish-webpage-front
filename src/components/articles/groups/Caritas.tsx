@@ -6,7 +6,7 @@ export const Caritas = () => {
   return (
     <>
       <ArticleImgHeader title="Caritas" />
-      <div className="p-4 text-left text-xl">
+      <div className="p-4 p-2 text-left">
         <blockquote>
           Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się
           modlili nad nim i namaścili go olejem w imię Pana. A modlitwa pełna

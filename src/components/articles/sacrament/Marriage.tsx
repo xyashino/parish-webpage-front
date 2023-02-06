@@ -8,7 +8,7 @@ export const Marriage = () => {
   return (
     <>
       <ArticleImgHeader title="Małżeństwo" />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center p-4">
         <blockquote>
           Przymierze małżeńskie, przez które mężczyzna i kobieta stanowią między
           sobą wewnętrzną wspólnotę życia i miłości, powstało z woli Stwórcy,

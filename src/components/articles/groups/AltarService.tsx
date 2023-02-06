@@ -6,7 +6,7 @@ export const AltarService = () => {
   return (
     <>
       <ArticleImgHeader title="Liturgiczna słuzba ołtarza" />
-      <div className="p-4 text-left text-xl">
+      <div className="p-4 p-2 text-left text-xl">
         <blockquote>
           Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się
           modlili nad nim i namaścili go olejem w imię Pana. A modlitwa pełna

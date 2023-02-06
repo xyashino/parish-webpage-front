@@ -6,7 +6,7 @@ export const Priesthood = () => {
   return (
     <>
       <ArticleImgHeader title="Kapłaństwo" />
-      <div className="text-left ">
+      <div className="p-4 text-left ">
         <blockquote>
           Sakrament święceń jest sakramentem, dzięki któremu posłanie,
           powierzone przez Chrystusa Apostołom, nadal jest spełniane w Kościele

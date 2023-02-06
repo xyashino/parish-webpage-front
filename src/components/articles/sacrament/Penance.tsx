@@ -6,7 +6,7 @@ export const Penance = () => {
   return (
     <>
       <ArticleImgHeader title="Pokuta" />
-      <div className="text-left">
+      <div className="p-4 text-left">
         <blockquote>
           Chrystus ustanowił sakrament pokuty dla wszystkich grzeszników w
           Kościele, a przede wszystkim dla tych, którzy po chrzcie popełnili

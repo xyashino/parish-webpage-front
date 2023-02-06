@@ -7,7 +7,7 @@ export const Confirmation = () => {
   return (
     <>
       <ArticleImgHeader title="Bierzmowanie" />
-      <div className="px-4 text-left">
+      <div className="p-4 text-left">
         <blockquote>
           <p>Weźmjicie Ducha świętego… (J 20,22)</p>
           <p>
