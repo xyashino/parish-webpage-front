@@ -11,12 +11,12 @@ export const Menu = ({ items, onClick }: Props) => {
       {items.map(({ title, active, type, id }) => (
         <li key={id} className="grow  text-center">
           <button
-            className={`bordered  w-full p-4 font-bold uppercase ${
+            className={` w-full p-4 font-bold uppercase ${
               active ? "active" : ""
             }`}
             onClick={() => (onClick ? onClick(type ?? title ?? id) : undefined)}
           >
-            <p>{title}</p>
+            <p className="w-full text-center">{title}</p>
           </button>
         </li>
       ))}
