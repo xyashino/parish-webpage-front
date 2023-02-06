@@ -5,7 +5,7 @@ import { SacramentMenu } from "@data/sacrament-menu.data";
 
 export const MinistrySacramentPage = () => {
   return (
-    <div className="bg-base-100 lg:w-4/5">
+    <div className="relative bg-base-100 lg:w-4/5">
       <InteractiveMenu menu={SacramentMenu} article>
         <ArticleWrapper />
       </InteractiveMenu>

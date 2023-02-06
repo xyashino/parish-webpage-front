@@ -28,7 +28,7 @@ export const InteractiveMenu = ({ menu, children }: Props) => {
 
   return (
     <MenuContext.Provider value={{ activeItem }}>
-      <div className="card  w-full">
+      <div className="card sticky top-0 w-full">
         <Menu items={menuCopy} onClick={changeBody} />
       </div>
       <div className="pb-4 lg:px-4">{children}</div>
