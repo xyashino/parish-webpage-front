@@ -1,8 +1,8 @@
 import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import React from "react";
 import { InfoAlert } from "@components/InfoAlert";
-import { ExpandableContent } from "@components/ExpandableContent";
 import { Divider } from "@components/ui/Divider";
+import { ExpandableContent } from "@components/ui/ExpandableContent";
 
 export const Marriage = () => {
   return (
@@ -179,7 +179,10 @@ export const Marriage = () => {
           </p>
           <p>
             Można skorzystać również z tzw.
-            <a href="#" className="uppercase text-accent">
+            <a
+              href="https://drtarnow.pl/dla-narzeczonych/katechizacja-przedmalzenska/w-osrodkach-rekolekcyjnych"
+              className="uppercase text-accent"
+            >
               {" "}
               weekendowych kursów
             </a>
