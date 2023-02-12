@@ -16,7 +16,7 @@ export const ErrorPage = () => {
           to={PageRouter.Main}
           className="btn-primary btn m-8 rounded  p-2 px-8 py-3 font-semibold  uppercase"
         >
-          Strony główna
+          Strona główna
         </Link>
       </div>
     </section>

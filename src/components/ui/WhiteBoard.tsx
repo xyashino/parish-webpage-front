@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren, ReactNode } from "react";
+import React, { HTMLAttributes, PropsWithChildren } from "react";
 
 interface Props
   extends PropsWithChildren,
@@ -14,7 +14,7 @@ export const WhiteBoard = ({
   ...props
 }: Props) => {
   const sectionClasses = `h-full w-full bg-base-100  lg:w-4/5 ${
-    className ? className : ""
+    className ?? ""
   }`;
   return (
     <section className={sectionClasses} {...props}>

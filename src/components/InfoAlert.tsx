@@ -4,7 +4,7 @@ interface Props extends PropsWithChildren, HTMLAttributes<HTMLElement> {}
 
 export const InfoAlert = ({ children, className, ...props }: Props) => {
   const localClass = `alert alert-info  mx-auto shadow-lg ${
-    className ? className : "w-full lg:w-4/5"
+    className ?? "w-full lg:w-4/5"
   }`;
   return (
     <div className={localClass} {...props}>

@@ -11,7 +11,6 @@ interface Props extends PropsWithChildren {
 
 export const InteractiveMenu = ({ menu, children }: Props) => {
   const menuCopy = [...menu];
-
   const [activeItem, setActiveItem] = useState(
     menuCopy.find(({ active }) => active) ?? menuCopy[0]
   );
