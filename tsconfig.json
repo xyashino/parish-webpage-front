@@ -25,6 +25,7 @@
       "@utils/*": ["src/utils/*"],
       "@context/*": ["src/context/*"],
       "@enums/*":  ["src/enums/*"],
+      "@hooks/*":  ["src/hooks/*"],
       "@frontendTypes/*": ["src/types/*"],
       "@backendTypes": ["../strona-parafialna-back/src/backendTypes/"]
     },
