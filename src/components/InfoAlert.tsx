@@ -9,7 +9,7 @@ export const InfoAlert = ({ children, className, ...props }: Props) => {
   return (
     <div className={localClass} {...props}>
       <div className="text-lg font-bold">
-        <Info className="float-left w-1/6 text-4xl" />
+        <Info className="float-left w-auto text-4xl" />
         <span className="w-5/6 p-2 text-sm lg:text-lg">{children}</span>
       </div>
     </div>

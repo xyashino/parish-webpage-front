@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import { GridLayout } from "@components/ui/GridLayout";
 import { DayIntentionsResponse } from "@backendTypes";
 import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
-import { MenuItem } from "@frontendTypes/menu-item.interface";
+import { MenuData } from "@frontendTypes/menu-data.interface";
 import { createDateRange } from "@utils/date.util";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import { Menu } from "@components/ui/Menu";
@@ -20,7 +20,7 @@ const weekday = [
 ];
 const today = weekday[new Date().getDay()];
 
-const activeTable = (intentions: DayIntentionsResponse[], menu: MenuItem[]) => {
+const activeTable = (intentions: DayIntentionsResponse[], menu: MenuData[]) => {
   return (
     intentions.find(({ id }) => id === menu.find(({ active }) => active)?.id) ??
     intentions[0]
@@ -29,7 +29,7 @@ const activeTable = (intentions: DayIntentionsResponse[], menu: MenuItem[]) => {
 
 export const IntentionsPage = () => {
   const intentions = useLoaderData() as DayIntentionsResponse[];
-  const [menu, setMenu] = useState<MenuItem[]>(
+  const [menu, setMenu] = useState<MenuData[]>(
     intentions.map(({ day, id }) => ({
       title: TRANSLATE_INTENTIONS.get(day) ?? "unknown",
       active: today === day,

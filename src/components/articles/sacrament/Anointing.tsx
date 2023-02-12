@@ -1,6 +1,7 @@
 import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
+import { CONTACT_DATA } from "@data/contact.data";
 
 export const Anointing = () => {
   return (
@@ -15,13 +16,13 @@ export const Anointing = () => {
         </blockquote>
         <p>
           Z Sakramentu Namaszczenia Chorych w naszej parafii można skorzystać z
-          okazji <span className="font-bold"> I Piątku miesiąca</span>, po
+          okazji <span className="font-bold"> I Piątku miesiąca </span>, po
           uprzednim zgłoszeniu chorego w kancelarii parafialnej.
         </p>
 
         <InfoAlert className="w-full">
           W nagłych przypadkach o każdej porze dnia i nocy, dzwoniąc na telefon
-          księdza dyżurnego 507 577 910 lub domofonem!
+          księdza dyżurnego {CONTACT_DATA.get("Phone")} lub domofonem!
         </InfoAlert>
 
         <p>

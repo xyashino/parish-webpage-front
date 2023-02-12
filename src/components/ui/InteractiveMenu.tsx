@@ -1,10 +1,10 @@
 import React, { PropsWithChildren, ReactNode, useState } from "react";
 import { Menu } from "@components/ui/Menu";
-import { MenuItem } from "../../types/menu-item.interface";
+import { MenuData } from "@frontendTypes/menu-data.interface";
 import { MenuContext } from "@context/MenuContext";
 
 interface Props extends PropsWithChildren {
-  menu: MenuItem[];
+  menu: MenuData[];
   article?: true;
   titlePanel?: ReactNode | ReactNode[];
 }

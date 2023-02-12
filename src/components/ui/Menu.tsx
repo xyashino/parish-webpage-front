@@ -1,8 +1,8 @@
 import React from "react";
-import { MenuItem } from "@frontendTypes/menu-item.interface";
+import { MenuData } from "@frontendTypes/menu-data.interface";
 
 interface Props {
-  items: MenuItem[];
+  items: MenuData[];
   onClick: (e: string) => void;
 }
 export const Menu = ({ items, onClick }: Props) => {

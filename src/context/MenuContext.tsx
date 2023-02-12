@@ -1,15 +1,15 @@
 import { createContext } from "react";
-import { MenuItem } from "@frontendTypes/menu-item.interface";
+import { MenuData } from "@frontendTypes/menu-data.interface";
 
 interface InitialValue {
-  activeItem: MenuItem;
+  activeItem: MenuData;
 }
 
 const initialValue = {
   activeItem: {
     title: "",
     active: false,
-  } as MenuItem,
+  } as MenuData,
 };
 
 export const MenuContext = createContext<InitialValue>(initialValue);

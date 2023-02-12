@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuItem } from "../types/menu-item.interface";
+import { MenuData } from "@frontendTypes/menu-data.interface";
 import { Baptism } from "@components/articles/sacrament/Baptism";
 import BaptismImage from "@assets/sacrament/chrzest1.webp";
 import { Confirmation } from "@components/articles/sacrament/Confirmation";
@@ -15,7 +15,7 @@ import PriesthoodImage from "@assets/sacrament/Kaplanstwo.webp";
 import { Marriage } from "@components/articles/sacrament/Marriage";
 import MarriageImage from "@assets/sacrament/Malzenstwo.webp";
 
-export const SACRAMENT_MENU: MenuItem[] = [
+export const SACRAMENT_MENU: MenuData[] = [
   {
     title: "Chrzest",
     article: <Baptism />,

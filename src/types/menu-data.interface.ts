@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface MenuItem {
+export interface MenuData {
   title: string;
   active: boolean;
   type?: string;
