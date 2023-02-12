@@ -1,5 +1,6 @@
-import { Info } from "@icons/Info";
 import React, { HTMLAttributes, PropsWithChildren } from "react";
+import { Info } from "@icons/Info";
+
 interface Props extends PropsWithChildren, HTMLAttributes<HTMLElement> {}
 
 export const InfoAlert = ({ children, className, ...props }: Props) => {

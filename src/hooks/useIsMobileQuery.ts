@@ -2,7 +2,6 @@ import { useLayoutEffect, useState } from "react";
 
 export const useIsMobileQuery = (minDesktopSize: number) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < minDesktopSize);
-
   useLayoutEffect(() => {
     const handleWindowResize = () => {
       setIsMobile(() => window.innerWidth < minDesktopSize);
@@ -12,6 +11,5 @@ export const useIsMobileQuery = (minDesktopSize: number) => {
       window.removeEventListener("resize", handleWindowResize);
     };
   });
-
   return isMobile;
 };

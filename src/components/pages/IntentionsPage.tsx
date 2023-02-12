@@ -31,7 +31,7 @@ export const IntentionsPage = () => {
   const intentions = useLoaderData() as DayIntentionsResponse[];
   const [menu, setMenu] = useState<MenuData[]>(
     intentions.map(({ day, id }) => ({
-      title: TRANSLATE_INTENTIONS.get(day) ?? "unknown",
+      title: TRANSLATE_INTENTIONS.get(day) ?? day,
       active: today === day,
       type: day,
       id,
@@ -46,8 +46,7 @@ export const IntentionsPage = () => {
     setMenu((prevState) => {
       prevState.forEach(
         (el) =>
-          (el.active =
-            (el.type as unknown as string).toLowerCase() === type.toLowerCase())
+          (el.active = (el.type as string).toLowerCase() === type.toLowerCase())
       );
       return [...prevState];
     });
