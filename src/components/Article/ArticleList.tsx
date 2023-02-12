@@ -1,4 +1,4 @@
-import { HTMLAttributes, PropsWithChildren } from "react";
+import React, { HTMLAttributes, PropsWithChildren } from "react";
 
 interface Props extends PropsWithChildren, HTMLAttributes<HTMLUListElement> {
   order?: true;

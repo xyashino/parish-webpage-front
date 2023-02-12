@@ -1,7 +1,7 @@
 import { PageRouter } from "@enums/page-router.enum";
 import { Page } from "../types/page.interface";
 
-export const NAVBAR_ITEMS: PageRouter[] = [
+export const NAVBAR_ITEMS_ORDER: PageRouter[] = [
   PageRouter.Announcement,
   PageRouter.Intentions,
   PageRouter.Ministry,
@@ -10,13 +10,10 @@ export const NAVBAR_ITEMS: PageRouter[] = [
   PageRouter.Contact,
 ];
 
-export const APP_NAME = "Parafia Gruszów Wielki";
-
 const MAIN_MENU_DATA: [PageRouter, Page][] = [
   [PageRouter.Main, { name: "Strona Głowna" }],
   [PageRouter.Announcement, { name: "Ogłoszenia" }],
   [PageRouter.Intentions, { name: "Intencje" }],
-  // [PageRouter.Gallery, { name: "Galeria" }],
   [
     PageRouter.Ministry,
     {
@@ -91,4 +88,4 @@ const MAIN_MENU_DATA: [PageRouter, Page][] = [
   ],
   [PageRouter.Contact, { name: "Kontakt" }],
 ];
-export const MenuData = new Map(MAIN_MENU_DATA);
+export const MENU_DATA = new Map(MAIN_MENU_DATA);

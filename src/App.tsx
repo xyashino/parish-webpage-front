@@ -1,6 +1,5 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 import { IntentionsPage } from "@components/pages/IntentionsPage";
 import { AnnouncementPage } from "@components/pages/AnnouncementPage";
 import { MainPage } from "@components/pages/MainPage";

@@ -1,9 +1,10 @@
 import React from "react";
 import { IntentionsTableRow } from "./IntentionsTableRow";
-import { TRANSLATE_INTENTIONS } from "@data/intentions.data";
+import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
 import { DayIntentionsResponse, IntentionResponse } from "@backendTypes";
 import { Day } from "@enums/day.enum";
 import { getDayAndMonth } from "@utils/date.util";
+import { IntentionsTableEmptyRow } from "@components/IntentionsTable/IntentionsTableEmptyRow";
 interface Props {
   day: DayIntentionsResponse["day"];
   intentionRow: IntentionResponse[];
@@ -26,14 +27,12 @@ export const IntentionsTable = ({ day, intentionRow, dateOfDay }: Props) => {
         </tr>
       </thead>
       <tbody>
-        {intentionRow ? (
+        {!intentionRow ? (
+          <IntentionsTableEmptyRow />
+        ) : (
           intentionRow.map(({ hour, value, id }) => (
             <IntentionsTableRow hour={hour} value={value} key={id} />
           ))
-        ) : (
-          <tr>
-            <td colSpan={2}> Upps... Brak intencji </td>{" "}
-          </tr>
         )}
       </tbody>
     </table>

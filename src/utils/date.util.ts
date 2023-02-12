@@ -30,6 +30,5 @@ export const getDayAndMonth = (date: string | null | Date): string => {
   const tempDate = new Date(date);
   const month = tempDate.getMonth() + 1;
   const day = tempDate.getDate();
-
   return ` ${day < 10 ? `0${day}` : day}.${month < 10 ? `0${month}` : month}`;
 };

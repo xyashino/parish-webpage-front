@@ -3,7 +3,7 @@ import { PageRouter } from "@enums/page-router.enum";
 import { redirect } from "react-router-dom";
 
 export const HttpRequest = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:3000",
 });
 
 export const getDataFrom = async (path: PageRouter) => {

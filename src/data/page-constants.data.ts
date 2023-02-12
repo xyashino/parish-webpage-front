@@ -6,3 +6,5 @@ export const QuotesData = [
   "W ostatecznym wyniku widząc, że gdzie Jej nie ma, tam nie ma i Boga, Jezusa, a gdzie Ona, tam Trójca Przenajświętsza, [tam] Jezus, postanowiłem sobie dać się Jej prowadzić zawsze, wszędzie i we wszystkim, czyli powracać wciąż do pokoju i miłości.",
   "Nie wierzę, że szympansy, czy inne pociech darwinowskie (małpy) prześcigną nas w budowie samolotów, lub innych wynalazkach, bo nie widać u nich postępu. Po tylu wiekach nie zdobyły się nawet na napisanie skromnych dziejow swego małpiego postępu.",
 ];
+
+export const APP_NAME = "Parafia Gruszów Wielki";

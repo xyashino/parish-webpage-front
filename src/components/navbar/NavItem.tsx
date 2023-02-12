@@ -1,10 +1,10 @@
 import React from "react";
-import { MenuData } from "@data/menu.data";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Page } from "../../types/page.interface";
 import { SubmenuList } from "@components/Submenu/SubmenuList";
 import { SubmenuContainer } from "@components/Submenu/SubmenuContainer";
 import { PageRouter } from "@enums/page-router.enum";
+import { MENU_DATA } from "@data/menu.data";
 
 interface Props {
   router: PageRouter;
@@ -14,7 +14,7 @@ interface Props {
   isMobile?: true;
 }
 export const NavItem = ({ router, onClick, className, isMobile }: Props) => {
-  const { name, submenu } = MenuData.get(router) as Page;
+  const { name, submenu } = MENU_DATA.get(router) as Page;
   if (!name) return null;
   const optionalStyles = className ? className : "";
   const clickMethod = () => {
@@ -42,10 +42,7 @@ export const NavItem = ({ router, onClick, className, isMobile }: Props) => {
 
   if (submenu) {
     return (
-      <li
-        onClick={clickMethod}
-        className={"dropdown-end font-bold normal-case" + optionalStyles}
-      >
+      <li className={"dropdown-end font-bold normal-case" + optionalStyles}>
         <SubmenuContainer name={name}>
           <SubmenuList submenu={submenu} onClick={clickMethod} />
         </SubmenuContainer>
@@ -54,11 +51,10 @@ export const NavItem = ({ router, onClick, className, isMobile }: Props) => {
   }
 
   return (
-    <li
-      onClick={clickMethod}
-      className={"font-bold normal-case " + optionalStyles}
-    >
-      <Link to={router}>{name}</Link>
+    <li className={"font-bold normal-case " + optionalStyles}>
+      <Link to={router} onClick={clickMethod}>
+        {name}
+      </Link>
     </li>
   );
 };

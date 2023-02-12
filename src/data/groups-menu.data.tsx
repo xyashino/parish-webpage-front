@@ -8,8 +8,7 @@ import { AltarService } from "@components/articles/groups/AltarService";
 import { Rosary } from "@components/articles/groups/Rosary";
 import { MarianService } from "@components/articles/groups/MarianService";
 import { Caritas } from "@components/articles/groups/Caritas";
-
-export const GroupsMenu: MenuItem[] = [
+export const GROUPS_MENU: MenuItem[] = [
   {
     title: "Liturgiczna Służba Ołtarza",
     article: <AltarService />,

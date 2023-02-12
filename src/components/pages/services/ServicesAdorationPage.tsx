@@ -1,6 +1,6 @@
+import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { Header } from "@components/ui/Header";
-
 export const ServicesAdorationPage = () => {
   return (
     <WhiteBoard article>

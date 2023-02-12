@@ -1,5 +1,5 @@
-import { Divider } from "@components/ui/Divider";
 import React from "react";
+import { Divider } from "@components/ui/Divider";
 import { useLoaderData } from "react-router-dom";
 import { AnnouncementsResponse } from "@backendTypes";
 

@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
 import { PageRouter } from "@enums/page-router.enum";
 
 interface Props {
@@ -11,8 +11,10 @@ export const SubmenuList = ({ submenu, onClick }: Props) => {
   return (
     <>
       {submenu.map(({ submenuRoute, submenuName }) => (
-        <li key={submenuRoute} onClick={onClick}>
-          <Link to={submenuRoute}>{submenuName}</Link>
+        <li key={submenuRoute}>
+          <Link to={submenuRoute} onClick={onClick}>
+            {submenuName}
+          </Link>
         </li>
       ))}
     </>

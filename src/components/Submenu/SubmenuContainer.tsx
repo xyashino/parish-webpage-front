@@ -1,5 +1,5 @@
-import { DropDown } from "@icons/DropDown";
 import React, { ReactNode } from "react";
+import { DropDown } from "@icons/DropDown";
 
 interface Props {
   name: string;

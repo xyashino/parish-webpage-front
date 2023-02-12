@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Logo } from "@icons/Logo";
-import { APP_NAME } from "@data/menu.data";
+import React, { useLayoutEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Logo } from "@icons/Logo";
 import { MobileNavbar } from "@components/navbar/MobileNavbar";
 import { DesktopNavbar } from "@components/navbar/DesktopNavbar";
 import { PageRouter } from "@enums/page-router.enum";
+import { APP_NAME } from "@data/page-constants.data";
 
 export const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleWindowResize = () => {
       setIsMobile(() => window.innerWidth < 1024);
     };

@@ -1,8 +1,6 @@
 import React, { PropsWithChildren, ReactNode, useState } from "react";
 import { Menu } from "@components/ui/Menu";
 import { MenuItem } from "../../types/menu-item.interface";
-import { GridLayout } from "@components/ui/GridLayout";
-import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { MenuContext } from "@context/MenuContext";
 
 interface Props extends PropsWithChildren {

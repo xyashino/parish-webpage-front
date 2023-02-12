@@ -4,7 +4,6 @@ import { Baptism } from "@components/articles/sacrament/Baptism";
 import BaptismImage from "@assets/sacrament/chrzest1.webp";
 import { Confirmation } from "@components/articles/sacrament/Confirmation";
 import ConfirmationImage from "@assets/sacrament/bierzmowanie.webp";
-
 import { Eucharist } from "@components/articles/sacrament/Eucharist";
 import EucharistImage from "@assets/sacrament/eucharystia.webp";
 import { Penance } from "@components/articles/sacrament/Penance";
@@ -16,7 +15,7 @@ import PriesthoodImage from "@assets/sacrament/Kaplanstwo.webp";
 import { Marriage } from "@components/articles/sacrament/Marriage";
 import MarriageImage from "@assets/sacrament/Malzenstwo.webp";
 
-export const SacramentMenu: MenuItem[] = [
+export const SACRAMENT_MENU: MenuItem[] = [
   {
     title: "Chrzest",
     article: <Baptism />,

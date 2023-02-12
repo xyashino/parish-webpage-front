@@ -1,5 +1,5 @@
-export const CouncilCadendention = "(2020-2025)";
-export const CouncilData = [
+export const COUNCIL_CADENTION = "(2020-2025)";
+export const COUNCIL_DATA = [
   {
     name: "Z URZĘDU:",
     list: [

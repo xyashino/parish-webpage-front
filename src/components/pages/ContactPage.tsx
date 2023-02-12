@@ -8,28 +8,29 @@ import { Bank } from "@icons/Bank";
 import { Divider } from "@components/ui/Divider";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import Image from "@assets/kontakt.webp";
+import { CONTACT_DATA } from "@data/contact.data";
 
 const IconStyle = "center center row-span-2 mr-2 place-self-center text-6xl";
-
-const contactData = [
+const NOT_FOUND_TEXT = "Brak Informacji";
+const contactList = [
   {
     title: "Adres:",
-    value: "Gruszów Wielki 205, 33-200 Dąbrowa Tarnowska",
+    value: CONTACT_DATA.get("Address") ?? NOT_FOUND_TEXT,
     icon: <Marker className={IconStyle} />,
   },
   {
     title: "Nr telefonu:",
-    value: "507 577 910",
+    value: CONTACT_DATA.get("Phone") ?? NOT_FOUND_TEXT,
     icon: <Phone className={IconStyle} />,
   },
   {
     title: "Emial:",
-    value: "parafia.gw@wp.pl",
+    value: CONTACT_DATA.get("Emial") ?? NOT_FOUND_TEXT,
     icon: <Email className={IconStyle} />,
   },
   {
     title: "Nr konta:",
-    value: "76 9462 0003 2001 0013 3724 0001",
+    value: CONTACT_DATA.get("Account") ?? NOT_FOUND_TEXT,
     icon: <Bank className={IconStyle} />,
   },
 ];
@@ -44,7 +45,7 @@ export const ContactPage = () => {
         <MapFrame />
         <Divider className="lg:divider-horizontal" />
         <div className="flex w-full flex-col justify-around lg:min-h-full lg:w-1/3">
-          {contactData.map(({ icon, title, value }) => (
+          {contactList.map(({ icon, title, value }) => (
             <ContactItem title={title} value={value} key={title}>
               {icon}
             </ContactItem>

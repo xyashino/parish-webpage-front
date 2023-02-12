@@ -1,13 +1,13 @@
-import { IntentionsTable } from "@components/IntentionsTable/IntentionsTable";
-import { Menu } from "../ui/Menu";
 import React, { useState } from "react";
+import { IntentionsTable } from "@components/IntentionsTable/IntentionsTable";
 import { useLoaderData } from "react-router-dom";
 import { GridLayout } from "@components/ui/GridLayout";
 import { DayIntentionsResponse } from "@backendTypes";
-import { TRANSLATE_INTENTIONS } from "@data/intentions.data";
+import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
 import { MenuItem } from "@frontendTypes/menu-item.interface";
 import { createDateRange } from "@utils/date.util";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
+import { Menu } from "@components/ui/Menu";
 
 const weekday = [
   "sunday",

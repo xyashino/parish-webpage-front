@@ -1,3 +1,4 @@
+import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { TextCard } from "@components/ui/TextCard";
 import { Header } from "@components/ui/Header";

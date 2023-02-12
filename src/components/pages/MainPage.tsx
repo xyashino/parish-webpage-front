@@ -1,7 +1,7 @@
 import React from "react";
 import Church from "@assets/main/church.webp";
 import { Card } from "@components/ui/Card";
-import { CHURCH_HISTORY } from "@data/main-page-constants.data";
+import { CHURCH_HISTORY } from "@data/page-constants.data";
 import { Divider } from "@components/ui/Divider";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import { QuoteCard } from "@components/QuoteCard/QuoteCard";

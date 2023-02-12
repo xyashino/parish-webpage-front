@@ -8,6 +8,7 @@ export const enum PageRouter {
   MinistryFuneral = "/ministry/funeral",
   MinistrySacrament = "/ministry/sacrament",
   MinistryGroups = "/ministry/groups",
+
   //PARISH
   Parish = "/parish",
   ParishHistory = "/parish/history",

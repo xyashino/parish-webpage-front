@@ -2,8 +2,9 @@ import React, { useRef, useState } from "react";
 import { MenuLeft } from "@icons/MenuLeft";
 import { createPortal } from "react-dom";
 import { MenuRight } from "@icons/MenuRight";
-import { APP_NAME, NAVBAR_ITEMS } from "@data/menu.data";
 import { NavItem } from "@components/navbar/NavItem";
+import { NAVBAR_ITEMS_ORDER } from "@data/menu.data";
+import { APP_NAME } from "@data/page-constants.data";
 
 export const MobileNavbar = () => {
   const navBar = useRef<HTMLUListElement | null>(null);
@@ -30,7 +31,11 @@ export const MobileNavbar = () => {
   const portal = document.getElementById("popups");
   const menu = (
     <div className="fixed top-0 z-20 block grid h-screen w-screen grid-cols-3 transition-transform lg:hidden ">
-      <label className="sm:col-span-2" onClick={() => toggleMenu(false)} />
+      <div
+        className="sm:col-span-2"
+        onClick={() => toggleMenu(false)}
+        onFocus={() => toggleMenu(false)}
+      />
       <ul
         className="menu col-span-2  translate-x-full animate-slidein  bg-base-100 px-1 shadow-2xl sm:col-span-1"
         ref={navBar}
@@ -42,7 +47,7 @@ export const MobileNavbar = () => {
           />
           <p className="w-3/4 font-bold uppercase">{APP_NAME}</p>
         </li>
-        {NAVBAR_ITEMS.map((router) => (
+        {NAVBAR_ITEMS_ORDER.map((router) => (
           <NavItem
             router={router}
             key={router}

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import { PageRouter } from "@enums/page-router.enum";
 import { ErrorLogo } from "@icons/ErrorLogo";
