@@ -1,7 +1,7 @@
 import React, { PropsWithChildren, ReactNode, useState } from "react";
-import { Menu } from "@components/ui/Menu";
 import { MenuData } from "@frontendTypes/menu-data.interface";
 import { MenuContext } from "@context/MenuContext";
+import { Menu } from "@components/Menu/Menu";
 
 interface Props extends PropsWithChildren {
   menu: MenuData[];

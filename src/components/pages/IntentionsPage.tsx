@@ -7,7 +7,7 @@ import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
 import { MenuData } from "@frontendTypes/menu-data.interface";
 import { createDateRange } from "@utils/date.util";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
-import { Menu } from "@components/ui/Menu";
+import { Menu } from "@components/Menu/Menu";
 
 const weekday = [
   "sunday",
