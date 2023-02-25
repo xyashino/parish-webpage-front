@@ -27,7 +27,7 @@
       "@enums/*":  ["src/enums/*"],
       "@hooks/*":  ["src/hooks/*"],
       "@frontendTypes/*": ["src/types/*"],
-      "@backendTypes": ["../strona-parafialna-back/src/backendTypes/"]
+      "@backendTypes": ["../strona-parafialna-back/src/types/"]
     },
   },
   "include": ["src"],
