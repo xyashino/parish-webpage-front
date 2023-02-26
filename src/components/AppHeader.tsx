@@ -13,8 +13,8 @@ export const AppHeader = () => {
   const { scrollToElement } = useScrollTo("#root");
 
   return (
-    <nav className="navbar sticky top-0 z-20 bg-base-100 shadow">
-      <div className="mx-2 flex-1 px-2">
+    <nav className="navbar sticky inset-0 z-20 bg-base-100 shadow">
+      <div className="min:w-1/4 mx-2 flex flex-1 px-2 lg:justify-center">
         <Link
           to={PageRouter.Main}
           className="btn-ghost btn text-xl font-bold normal-case"

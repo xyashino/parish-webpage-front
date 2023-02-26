@@ -110,7 +110,7 @@ export const Baptism = () => {
 
         <Divider />
 
-        <blockquote className="mb-8 text-xl">
+        <blockquote className="mb-8 text-center text-xl">
           &quot;Niektórzy myślą: &quot;ale po co chrzcić dziecko, które tego nie
           rozumie? Poczekajmy aż dorośnie, zrozumie i samo poprosi o
           chrzest&quot;. Ale to oznacza brak ufności w Ducha Świętego. Kiedy
