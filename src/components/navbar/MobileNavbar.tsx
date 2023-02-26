@@ -6,9 +6,20 @@ import { NavItem } from "@components/navbar/NavItem";
 import { NAVBAR_ITEMS_ORDER } from "@data/menu.data";
 import { APP_NAME } from "@data/page-constants.data";
 
+const hideAndAnimateMenu = async (menu: HTMLUListElement, ms: number) => {
+  await menu
+    .animate(
+      [{ transform: "translateX(0%)" }, { transform: "translateX(100%)" }],
+      { duration: ms, fill: "forwards" }
+    )
+    .play();
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
 export const MobileNavbar = () => {
   const navBar = useRef<HTMLUListElement | null>(null);
   const [showMenu, setShowMenu] = useState(false);
+  const portal = document.getElementById("popups");
 
   const toggleMenu = async (show: boolean) => {
     if (show) {
@@ -17,25 +28,16 @@ export const MobileNavbar = () => {
     }
     const navbar = navBar.current;
     if (!navbar) return;
-    navbar
-      .animate(
-        [{ transform: "translateX(0%)" }, { transform: "translateX(100%)" }],
-        { duration: 500, fill: "forwards" }
-      )
-      .play();
-    setTimeout(() => {
-      setShowMenu(show);
-    }, 500);
+    await hideAndAnimateMenu(navbar, 500);
+    setShowMenu(show);
   };
 
-  const portal = document.getElementById("popups");
+  const displayMenu = () => toggleMenu(true);
+  const hideMenu = () => toggleMenu(false);
+
   const menu = (
-    <div className="fixed top-0 z-20 block grid h-screen w-screen grid-cols-3 transition-transform lg:hidden ">
-      <div
-        className="sm:col-span-2"
-        onClick={() => toggleMenu(false)}
-        onFocus={() => toggleMenu(false)}
-      />
+    <div className="fixed top-0 z-20 block grid h-screen w-screen grid-cols-3 overflow-y-scroll transition-transform lg:hidden">
+      <div className="sm:col-span-2" onClick={hideMenu} onFocus={hideMenu} />
       <ul
         className="menu col-span-2  translate-x-full animate-slidein  bg-base-100 px-1 shadow-2xl sm:col-span-1"
         ref={navBar}
@@ -43,7 +45,7 @@ export const MobileNavbar = () => {
         <li className="flex flex-row items-center justify-center bg-primary text-base-100">
           <MenuRight
             className="h-16  w-16 w-1/4 stroke-current"
-            onClick={() => toggleMenu(false)}
+            onClick={hideMenu}
           />
           <p className="w-3/4 font-bold uppercase">{APP_NAME}</p>
         </li>
@@ -51,8 +53,8 @@ export const MobileNavbar = () => {
           <NavItem
             router={router}
             key={router}
-            onClick={() => toggleMenu(false)}
-            className={"border-b-2"}
+            onClick={hideMenu}
+            className="border-b-2"
             isMobile
           />
         ))}
@@ -65,8 +67,8 @@ export const MobileNavbar = () => {
       {showMenu ? (portal ? createPortal(menu, portal) : null) : null}
       <div className="flex-none p-4 lg:hidden">
         <MenuLeft
-          className=" btn-ghost inline-block h-8 w-8 stroke-current"
-          onClick={() => toggleMenu(true)}
+          className="btn-ghost inline-block h-8 w-8 stroke-current"
+          onClick={displayMenu}
         />
       </div>
     </>
