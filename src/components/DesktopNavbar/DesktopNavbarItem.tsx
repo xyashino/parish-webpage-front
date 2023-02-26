@@ -5,6 +5,7 @@ import { SubmenuContainer } from "@components/Submenu/SubmenuContainer";
 import { PageRouter } from "@enums/page-router.enum";
 import { MENU_DATA } from "@data/menu.data";
 import { NavItem } from "@components/NavItem";
+import { useScrollTo } from "@hooks/useScrollTo";
 
 interface Props {
   router: PageRouter;
@@ -14,16 +15,11 @@ interface Props {
 }
 export const DesktopNavbarItem = ({ router, onClick, className }: Props) => {
   const { name, submenu } = MENU_DATA.get(router) as Page;
-  if (!name) return null;
   const optionalStyles = className ?? "";
+  const { scrollToElement } = useScrollTo("#root");
   const clickMethod = () => {
-    const rootElement = document.querySelector("#root") as HTMLElement;
-    if (rootElement) {
-      rootElement.scrollTo(0, 0);
-      rootElement.focus();
-    }
-    if (!onClick) return;
-    onClick();
+    scrollToElement();
+    onClick ? onClick() : null;
   };
 
   if (submenu) {
