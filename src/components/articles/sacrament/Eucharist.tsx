@@ -1,10 +1,10 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import React from "react";
 
 export const Eucharist = () => {
   return (
     <>
-      <ArticleImgHeader title="Eucharystia" />
+      <BackgroundImgHeader title="Eucharystia" />
       <div className="p-4 text-left ">
         <blockquote>
           Eucharystia jest źródłem i zarazem szczytem całego życia

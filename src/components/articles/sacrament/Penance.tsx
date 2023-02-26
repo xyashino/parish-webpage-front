@@ -1,11 +1,11 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import React from "react";
 import { InfoAlert } from "@components/InfoAlert";
 
 export const Penance = () => {
   return (
     <>
-      <ArticleImgHeader title="Pokuta" />
+      <BackgroundImgHeader title="Pokuta" />
       <div className="p-4 text-left">
         <blockquote>
           Chrystus ustanowił sakrament pokuty dla wszystkich grzeszników w

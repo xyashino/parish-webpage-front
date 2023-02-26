@@ -1,11 +1,11 @@
 import React from "react";
 import { Divider } from "@components/ui/Divider";
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { ArticleList } from "@components/Article/ArticleList";
 export const Baptism = () => {
   return (
     <>
-      <ArticleImgHeader title="Chrzest" />
+      <BackgroundImgHeader title="Chrzest" />
       <div className="p-4 text-left">
         <blockquote className="upperase ">
           Idźcie więc i nauczajcie wszystkie narody,udzielając im chrztu w imię

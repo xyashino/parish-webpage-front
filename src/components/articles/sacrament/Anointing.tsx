@@ -1,4 +1,4 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
 import { CONTACT_DATA } from "@data/contact.data";
@@ -6,7 +6,7 @@ import { CONTACT_DATA } from "@data/contact.data";
 export const Anointing = () => {
   return (
     <>
-      <ArticleImgHeader title="Namaszczenie chorych" />
+      <BackgroundImgHeader title="Namaszczenie chorych" />
       <div className="p-4 text-left">
         <blockquote>
           Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się

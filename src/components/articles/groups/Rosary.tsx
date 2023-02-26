@@ -1,11 +1,11 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
 
 export const Rosary = () => {
   return (
     <>
-      <ArticleImgHeader title="Roże Różancowe" />
+      <BackgroundImgHeader title="Roże Różancowe" />
       <div className="p-4 p-2 text-left">
         <blockquote>
           Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się

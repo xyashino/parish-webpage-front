@@ -1,14 +1,14 @@
 import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { ArticleList } from "@components/Article/ArticleList";
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import Image from "@assets/parafia-proboszczowie.webp";
 export const ParishPriestsPage = () => {
   return (
     <WhiteBoard article>
       <BackgroundImage image={Image} />
-      <ArticleImgHeader title="Proboszczowie w historii parafii:" />
+      <BackgroundImgHeader title="Proboszczowie w historii parafii:" />
       <ArticleList order className="text-2xl text-black">
         <li className="border-b-2 p-4 ">
           <span className="font-bold ">Ks. Ferdynand Prymas:</span>

@@ -1,11 +1,11 @@
 import React from "react";
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { TextCard } from "@components/ui/TextCard";
 
 export const Priesthood = () => {
   return (
     <>
-      <ArticleImgHeader title="Kapłaństwo" />
+      <BackgroundImgHeader title="Kapłaństwo" />
       <div className="p-4 text-left ">
         <blockquote>
           Sakrament święceń jest sakramentem, dzięki któremu posłanie,

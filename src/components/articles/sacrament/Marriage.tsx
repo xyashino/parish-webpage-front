@@ -1,4 +1,4 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import React from "react";
 import { InfoAlert } from "@components/InfoAlert";
 import { Divider } from "@components/ui/Divider";
@@ -7,7 +7,7 @@ import { ExpandableContent } from "@components/ui/ExpandableContent";
 export const Marriage = () => {
   return (
     <>
-      <ArticleImgHeader title="Małżeństwo" />
+      <BackgroundImgHeader title="Małżeństwo" />
       <div className="flex flex-col items-center p-4">
         <blockquote>
           Przymierze małżeńskie, przez które mężczyzna i kobieta stanowią między

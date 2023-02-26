@@ -1,12 +1,12 @@
 import React from "react";
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { Divider } from "@components/ui/Divider";
 import { ArticleList } from "@components/Article/ArticleList";
 
 export const Confirmation = () => {
   return (
     <>
-      <ArticleImgHeader title="Bierzmowanie" />
+      <BackgroundImgHeader title="Bierzmowanie" />
       <div className="p-4 text-left">
         <blockquote>
           <p>Weźmjicie Ducha świętego… (J 20,22)</p>

@@ -1,15 +1,15 @@
 import React from "react";
 import { WhiteBoard } from "@components/ui/WhiteBoard";
 import { TextCard } from "@components/ui/TextCard";
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import Image from "@assets/nabozenstwa.webp";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 
 export const ServicesPage = () => {
   return (
     <WhiteBoard article>
       <BackgroundImage image={Image} />
-      <ArticleImgHeader title="Nabożeństwa - Msze św." />
+      <BackgroundImgHeader title="Nabożeństwa - Msze św." />
       <TextCard>
         <p className="text-2xl font-bold">
           Niedziele i uroczystości obowiązkowe:

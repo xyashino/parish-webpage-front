@@ -1,11 +1,11 @@
-import { ArticleImgHeader } from "@components/Article/ArticleImgHeader";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
 
 export const AltarService = () => {
   return (
     <>
-      <ArticleImgHeader title="Liturgiczna słuzba ołtarza" />
+      <BackgroundImgHeader title="Liturgiczna słuzba ołtarza" />
       <div className="p-4 p-2 text-left text-xl">
         <blockquote>
           Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się
