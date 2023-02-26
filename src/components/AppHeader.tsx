@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "@icons/Logo";
-import { MobileNavbar } from "@components/navbar/MobileNavbar";
-import { DesktopNavbar } from "@components/navbar/DesktopNavbar";
+import { DesktopNavbar } from "@components/DesktopNavbar/DesktopNavbar";
 import { PageRouter } from "@enums/page-router.enum";
 import { APP_NAME } from "@data/page-constants.data";
 import { useIsMobileQuery } from "@hooks/useIsMobileQuery";
+import { MobileNavbar } from "@components/MobileNavbar/MobileNavbar";
 
 export const AppHeader = () => {
   const isMobile = useIsMobileQuery(1024);
