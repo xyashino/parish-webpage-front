@@ -9,7 +9,7 @@ export const AnnouncementPage = () => {
 
   return (
     <div className="flex w-full flex-col items-center bg-base-100 lg:w-4/5 ">
-      <AnnouncementHeader />
+      <AnnouncementHeader title={data.title} subtitle={data.subtitle} />
       <article className="prose prose-neutral mb-8 w-full p-4 lg:w-4/5 lg:prose-xl">
         <AnnouncementBody announcements={data.announcements} />
       </article>
