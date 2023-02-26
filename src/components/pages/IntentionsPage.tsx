@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { IntentionsTable } from "@components/IntentionsTable/IntentionsTable";
 import { useLoaderData } from "react-router-dom";
-import { GridLayout } from "@components/ui/GridLayout";
 import { DayIntentionsResponse } from "@backendTypes";
 import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
 import { MenuData } from "@frontendTypes/menu-data.interface";
 import { createDateRange } from "@utils/date.util";
 import { BackgroundImage } from "@components/ui/BackgroundImage";
 import { Menu } from "@components/Menu/Menu";
+import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
+import { WhiteBoard } from "@components/ui/WhiteBoard";
+import Image from "@assets/intencje.webp";
 
 const weekday = [
   "sunday",
@@ -18,6 +20,7 @@ const weekday = [
   "friday",
   "saturday",
 ];
+
 const today = weekday[new Date().getDay()];
 
 const activeTable = (intentions: DayIntentionsResponse[], menu: MenuData[]) => {
@@ -42,42 +45,38 @@ export const IntentionsPage = () => {
     activeTable(intentions, menu)
   );
 
-  const changeTable = (type: string) => {
+  const changeTable = (id: string) => {
     setMenu((prevState) => {
-      prevState.forEach(
-        (el) =>
-          (el.active = (el.type as string).toLowerCase() === type.toLowerCase())
-      );
+      prevState.forEach((el) => (el.active = (el.id as string) === id));
       return [...prevState];
     });
-
     setTable(() => activeTable(intentions, menu));
   };
   const title = (
     <p>
-      INTENCJE TYGODNIOWE <br />{" "}
       {createDateRange(
         intentions.at(0)?.dateOfDay ?? null,
         intentions.at(-1)?.dateOfDay ?? null
-      )}
+      ).toUpperCase()}
     </p>
-  );
-  const panel = (
-    <div className="card w-full">
-      <Menu items={menu} onClick={changeTable} />
-    </div>
   );
 
   return (
     <>
-      <BackgroundImage divider />
-      <GridLayout titleContent={title} leftPanelContent={panel}>
+      <WhiteBoard className="flex flex-col items-center">
+        <BackgroundImage image={Image} />
+        <BackgroundImgHeader title="INTENCJE TYGODNIOWE">
+          {title}
+        </BackgroundImgHeader>
+        <div className="card mb-2 w-full border-y-2">
+          <Menu items={menu} onClick={changeTable} />
+        </div>
         <IntentionsTable
           day={table.day}
           intentionRow={table.intentions}
           dateOfDay={table.dateOfDay}
         />
-      </GridLayout>
+      </WhiteBoard>
     </>
   );
 };
