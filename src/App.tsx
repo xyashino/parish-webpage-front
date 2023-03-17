@@ -21,6 +21,8 @@ import { ServicesAdorationPage } from "@components/pages/services/ServicesAdorat
 import { MinistrySacramentPage } from "@components/pages/ministry/MinistrySacramentPage";
 import { ContactPage } from "@components/pages/ContactPage";
 import { NotFound } from "@components/pages/NotFound";
+import { GalleryPage } from "@components/pages/GalleryPage";
+import { AlbumPage } from "@components/pages/AlbumPage";
 
 const routers = createBrowserRouter([
   {
@@ -113,6 +115,19 @@ const routers = createBrowserRouter([
         path: PageRouter.Contact,
         element: <ContactPage />,
         errorElement: <ErrorPage />,
+      },
+      {
+        path: PageRouter.Gallery,
+        element: <GalleryPage />,
+        loader: () => getDataFrom("/albums/types" as PageRouter),
+        shouldRevalidate: ({ currentUrl }) =>
+          currentUrl.pathname !== PageRouter.Gallery,
+      },
+      {
+        path: `album/:id`,
+        element: <AlbumPage />,
+        loader: ({ params }) =>
+          getDataFrom(`/albums/${params.id}` as PageRouter),
       },
     ],
   },
