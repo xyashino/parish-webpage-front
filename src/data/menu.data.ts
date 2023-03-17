@@ -4,6 +4,7 @@ import { Page } from "../types/page.interface";
 export const NAVBAR_ITEMS_ORDER: PageRouter[] = [
   PageRouter.Announcement,
   PageRouter.Intentions,
+  PageRouter.Gallery,
   PageRouter.Ministry,
   PageRouter.Parish,
   PageRouter.Services,
@@ -86,6 +87,7 @@ const MAIN_MENU_DATA: [PageRouter, Page][] = [
       ],
     },
   ],
+  [PageRouter.Gallery, { name: "Galeria" }],
   [PageRouter.Contact, { name: "Kontakt" }],
 ];
 export const MENU_DATA = new Map(MAIN_MENU_DATA);
