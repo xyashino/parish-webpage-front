@@ -28,7 +28,7 @@ export const GalleryPage = () => {
   };
 
   return (
-    <WhiteBoard className="grid min-h-[80vh]  grid-cols-4">
+    <WhiteBoard className="min-h-[80vh] lg:grid  lg:grid-cols-4">
       <GalleryMenu
         data={data}
         clickMethod={changeActiveItem}

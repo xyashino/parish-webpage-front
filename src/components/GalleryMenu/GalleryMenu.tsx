@@ -10,7 +10,7 @@ interface Props {
 
 export const GalleryMenu = ({ data, activeId, clickMethod }: Props) => {
   return (
-    <ul className="menu flex flex-col border-r-2 shadow">
+    <ul className="menu menu-horizontal w-full border-r-2 lg:menu-vertical">
       {data.map(({ id, name }) => (
         <GalleryMenuItem
           name={name}
