@@ -23,4 +23,6 @@ export const enum PageRouter {
   ServicesAdoration = "/services/adoration",
   //CONTACT
   Contact = "/contact",
+
+  Gallery = "/gallery",
 }
