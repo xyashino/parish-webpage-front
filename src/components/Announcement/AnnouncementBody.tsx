@@ -1,4 +1,6 @@
 import React from "react";
+import parse from "html-react-parser";
+
 import { Divider } from "@components/ui/Divider";
 import { AnnouncementsResponse } from "@backendTypes";
 
@@ -16,10 +18,10 @@ export const AnnouncementBody = ({ announcements }: Props) => {
     <>
       <ol className="text-left">
         {announcements.map(({ body, id }) => (
-          <div key={id}>
-            <li>{body}</li>
+          <li key={id}>
+            {parse(body)}
             <Divider />
-          </div>
+          </li>
         ))}
       </ol>
     </>
