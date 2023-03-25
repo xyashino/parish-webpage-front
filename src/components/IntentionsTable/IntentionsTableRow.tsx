@@ -9,7 +9,7 @@ export const IntentionsTableRow = ({
   return (
     <tr>
       <td className="border-r-1 text-center font-bold">{hour}</td>
-      <td className="whitespace-normal break-words">{parse(value)}</td>
+      <td className="prose whitespace-normal break-words">{parse(value)}</td>
     </tr>
   );
 };
