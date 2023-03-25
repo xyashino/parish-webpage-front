@@ -1,5 +1,6 @@
 import React from "react";
 import { IntentionResponse } from "@backendTypes";
+import parse from "html-react-parser";
 
 export const IntentionsTableRow = ({
   hour,
@@ -8,9 +9,7 @@ export const IntentionsTableRow = ({
   return (
     <tr>
       <td className="border-r-1 text-center font-bold">{hour}</td>
-      <td>
-        <p className="whitespace-normal break-words">{value}</p>
-      </td>
+      <td className="whitespace-normal break-words">{parse(value)}</td>
     </tr>
   );
 };
