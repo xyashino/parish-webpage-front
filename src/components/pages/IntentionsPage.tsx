@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IntentionsTable } from "@components/IntentionsTable/IntentionsTable";
 import { useLoaderData } from "react-router-dom";
-import { DayIntentionsResponse } from "@backendTypes";
+import { DayIntention, IntentionResponse } from "@backendTypes";
 import { TRANSLATE_INTENTIONS } from "@data/translate-intentions.data";
 import { MenuData } from "@frontendTypes/menu-data.interface";
 import { createDateRange } from "@utils/date.util";
@@ -23,17 +23,17 @@ const weekday = [
 
 const today = weekday[new Date().getDay()];
 
-const activeTable = (intentions: DayIntentionsResponse[], menu: MenuData[]) => {
+const activeTable = (days: DayIntention[], menu: MenuData[]) => {
   return (
-    intentions.find(({ id }) => id === menu.find(({ active }) => active)?.id) ??
-    intentions[0]
+    days.find(({ id }) => id === menu.find(({ active }) => active)?.id) ??
+    days[0]
   );
 };
 
 export const IntentionsPage = () => {
-  const intentions = useLoaderData() as DayIntentionsResponse[];
+  const [{ startWeek, endWeek, days }] = useLoaderData() as IntentionResponse[];
   const [menu, setMenu] = useState<MenuData[]>(
-    intentions.map(({ day, id }) => ({
+    days.map(({ day, id }) => ({
       title: TRANSLATE_INTENTIONS.get(day) ?? day,
       active: today === day,
       type: day,
@@ -41,25 +41,16 @@ export const IntentionsPage = () => {
     }))
   );
 
-  const [table, setTable] = useState<DayIntentionsResponse>(
-    activeTable(intentions, menu)
-  );
+  const [table, setTable] = useState<DayIntention>(activeTable(days, menu));
 
   const changeTable = (id: string) => {
     setMenu((prevState) => {
       prevState.forEach((el) => (el.active = (el.id as string) === id));
       return [...prevState];
     });
-    setTable(() => activeTable(intentions, menu));
+    setTable(() => activeTable(days, menu));
   };
-  const title = (
-    <p>
-      {createDateRange(
-        intentions.at(0)?.dateOfDay ?? null,
-        intentions.at(-1)?.dateOfDay ?? null
-      ).toUpperCase()}
-    </p>
-  );
+  const title = <p>{createDateRange(startWeek, endWeek).toUpperCase()}</p>;
 
   return (
     <>
@@ -73,7 +64,7 @@ export const IntentionsPage = () => {
         </div>
         <IntentionsTable
           day={table.day}
-          intentionRow={table.intentions}
+          intentionRow={table.intentionsOfDay}
           dateOfDay={table.dateOfDay}
         />
       </WhiteBoard>

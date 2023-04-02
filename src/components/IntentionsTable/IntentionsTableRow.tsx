@@ -1,11 +1,11 @@
 import React from "react";
-import { IntentionResponse } from "@backendTypes";
+import { IntentionsOfDay } from "@backendTypes";
 import parse from "html-react-parser";
 
 export const IntentionsTableRow = ({
   hour,
   value,
-}: Omit<IntentionResponse, "id">) => {
+}: Omit<IntentionsOfDay, "id">) => {
   return (
     <tr>
       <td className="border-r-1 text-center font-bold">{hour}</td>

@@ -38,7 +38,8 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Intentions,
         element: <IntentionsPage />,
-        loader: () => getDataFrom(PageRouter.Intentions),
+        loader: () =>
+          getDataFrom(`${PageRouter.Intentions}?status=ACTIVE` as PageRouter),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Intentions,
         errorElement: <ErrorPage />,

@@ -1,11 +1,12 @@
 import React from "react";
-import { DayIntentionsResponse, IntentionResponse } from "@backendTypes";
+import { IntentionsOfDay } from "@backendTypes";
 import { IntentionsTableHead } from "@components/IntentionsTable/IntentionsTableHead";
 import { IntentionsTableBody } from "@components/IntentionsTable/IntentionsTableBody";
+import { DayIntentionsResponse } from "../../../../parish-webpage-backend/src/types/intentions/day-intentions/day-intentions-response.interface";
 
 interface Props {
   day: DayIntentionsResponse["day"];
-  intentionRow: IntentionResponse[];
+  intentionRow: IntentionsOfDay[];
   dateOfDay: DayIntentionsResponse["dateOfDay"];
 }
 

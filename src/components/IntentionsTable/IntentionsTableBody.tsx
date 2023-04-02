@@ -1,10 +1,10 @@
 import React from "react";
-import { IntentionResponse } from "@backendTypes";
+import { IntentionsOfDay } from "@backendTypes";
 import { IntentionsTableEmptyRow } from "@components/IntentionsTable/IntentionsTableEmptyRow";
 import { IntentionsTableRow } from "@components/IntentionsTable/IntentionsTableRow";
 
 interface Props {
-  intentionRow: IntentionResponse[];
+  intentionRow: IntentionsOfDay[];
 }
 
 export const IntentionsTableBody = ({ intentionRow }: Props) => {
