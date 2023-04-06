@@ -1,23 +1,23 @@
-import React, { HTMLAttributes, PropsWithChildren } from "react";
+import React from "react";
 
-interface Props extends PropsWithChildren, HTMLAttributes<HTMLUListElement> {
-  order?: true;
-  onlyMyClasses?: true;
-  outside?: true;
+interface Props extends React.HTMLAttributes<HTMLUListElement> {
+  order?: boolean;
+  onlyCustomClasses?: boolean;
+  outsideList?: boolean;
 }
 
 export const ArticleList = ({
   children,
   className,
-  onlyMyClasses,
+  onlyCustomClasses,
   order,
-  outside,
+  outsideList,
   ...props
 }: Props) => {
-  let ulClasses = `${outside ? "list-outside" : "list-inside"} ${
+  let ulClasses = `${outsideList ? "list-outside" : "list-inside"} ${
     order ? "list-decimal" : "list-disc"
   } p-4 text-left text-xl ${className ? className : ""}`;
-  if (onlyMyClasses) {
+  if (onlyCustomClasses) {
     ulClasses = className ?? "";
   }
 

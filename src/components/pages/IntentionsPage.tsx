@@ -63,7 +63,7 @@ export const IntentionsPage = () => {
 
   return (
     <>
-      <WhiteBoard className="flex flex-col items-center">
+      <WhiteBoard className="flex flex-col items-center px-2">
         <BackgroundImage image={Image} />
         <BackgroundImgHeader title="INTENCJE TYGODNIOWE">
           {title}

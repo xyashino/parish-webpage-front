@@ -1,56 +1,75 @@
 import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
-import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
+import { TextCard } from "@components/ui/TextCard";
 
 export const MarianService = () => {
   return (
     <>
       <BackgroundImgHeader title="Dziweczęca służba maryjna" />
       <div className="p-4 p-2 text-left">
-        <blockquote>
-          Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się
-          modlili nad nim i namaścili go olejem w imię Pana. A modlitwa pełna
-          wiary będzie dla chorego ratunkiem i Pan go podźwignie, a jeśliby
-          popełnił grzechy, będą mu odpuszczone.
-        </blockquote>
-        <p>
-          Z Sakramentu Namaszczenia Chorych w naszej parafii można skorzystać z
-          okazji <span className="font-bold"> I Piątku miesiąca</span>, po
-          uprzednim zgłoszeniu chorego w kancelarii parafialnej.
-        </p>
-
-        <InfoAlert className="w-full">
-          W nagłych przypadkach o każdej porze dnia i nocy, dzwoniąc na telefon
-          księdza dyżurnego 507 577 910 lub domofonem!
-        </InfoAlert>
-
-        <p>
-          Sakramentu namaszczenia chorych udziela się osobom chorym, udającym
-          się na operację, będącym w podeszłym wieku, a także w ostatniej
-          godzinie życia. Tak jak pozostałe sakramenty, tak i sakrament
-          namaszczenia przeznaczony jest wyłącznie dla żyjących! Po stwierdzeniu
-          zgonu kapłan nie może go już udzielić.
-        </p>
-        <h2>
-          Na czas udzielania sakramentu chorych: spowiedzi, Komunii św. i
-          namaszczenia olejami św. w mieszkaniu chorego koniecznie należy
-          przygotować:
+        <h2 className="w-full text-center font-bold">
+          DZIEWCZĘCA SŁUŻBA MARYJNA
         </h2>
         <ul>
-          <li>stół nakryty białym obrusem;</li>
-          <li>postawić na nim krzyż, dwie świece;</li>
-          <li>naczynie z wodą święconą i kropidło;</li>
           <li>
-            szklankę letniej, przegotowanej wody jeśli chory ma problemy z
-            przełykaniem;
+            <p>Dziewczęca – Dla dziewcząt</p>
           </li>
-          <li>watę i talerzyk.</li>
+          <li>
+            <p>Służba – Jesteśmy dla innych</p>
+          </li>
+          <li>
+            <p>Maryjna – Ponieważ to Ona jest naszym wzorem</p>
+          </li>
         </ul>
+        <h2 className="w-full text-center font-bold">NASZE PRZYWILEJE</h2>
         <p>
-          Gdy kapłan przybędzie z sakramentami, należy zgromadzić wszystkich
-          obecnych na wspólną modlitwę. W czasie spowiedzi chorego wyjść do
-          innego pokoju i wspólnie odmawiać różaniec, koronkę do Bożego
-          miłosierdzia lub śpiewać religijne pieśni.
+          Co niedzielę na Mszy św. dla dzieci stoimy w niebieskich pelerynkach,
+          czytamy modlitwę wiernych oraz uczestniczymy w procesji z darami. Na
+          spotkaniach poznajemy różne aspekty naszej wiary oraz bawimy się.
+        </p>
+        <p>
+          8 grudnia jest nasze święto, podczas którego przyjmujemy nowe
+          dziewczynki. Dostają one cudowny medalik i otrzymują drugi stopień
+          DSM.
+        </p>
+        <TextCard>
+          <h3 className="w-full text-center font-bold text-base-100">
+            NASZE OBOWIĄZKI
+          </h3>
+          <ul className="font-bold">
+            <li>
+              <p>Przyjaźń z Jezusem</p>
+            </li>
+            <li>
+              <p>Posłuszeństwo</p>
+            </li>
+            <li>
+              <p>Wspólnota</p>
+            </li>
+            <li>
+              <p>Ofiara</p>
+            </li>
+            <li>
+              <p>Radość</p>
+            </li>
+          </ul>
+        </TextCard>
+        <h2 className="w-full text-center font-bold">Symbolika:</h2>
+        <p>
+          Kolor biały i lilia to symbol niepokalanego poczęcia i czystości
+          Maryi. Kolor złoty i korona to symbol godności królewskiej. Krzyż jest
+          symbolem Jezusa przypomina o udziale Maryi w ofierze Boskiego Syna.
+          Kolor niebieski to symbol niewinność i przypomina o Wniebowzięciu
+          Maryi.
+        </p>
+        <h2 className="w-full text-center font-bold">DSM W NASZEJ DIECEZJI</h2>
+        <p>
+          W parafiach Diecezji Tarnowskiej jest obecnie ponad 150 grup
+          Dziewczęcej Służby Maryjnej. Tworzy je ponad 5000 dziewcząt. Księżom
+          odpowiedzialnym za formację dziewcząt, należących do DSM pomagają
+          przewodniczki – przyjmowane do tej posługi po ukończeniu szkolenia
+          podczas kursów formacyjnych, prowadzonych przez Duszpasterstwo
+          Młodzieży Kurii Diecezjalnej w Tarnowie.
         </p>
       </div>
     </>

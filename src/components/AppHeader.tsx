@@ -14,7 +14,7 @@ export const AppHeader = () => {
 
   return (
     <nav className="navbar sticky inset-0 z-20 bg-base-100 shadow">
-      <div className="min:w-1/4 mx-2 flex flex-1 px-2 lg:justify-center">
+      <div className="min:w-1/4 mx-2 flex flex-1 lg:justify-center lg:px-2">
         <Link
           to={PageRouter.Main}
           className="btn-ghost btn text-xl font-bold normal-case"

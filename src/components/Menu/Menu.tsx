@@ -13,7 +13,7 @@ export const Menu = ({ items, onClick }: Props) => {
       {items.map(({ title, active, type, id }, index) => (
         <MenuItem
           key={id ?? index}
-          active={active}
+          isActive={active}
           title={title}
           onClick={() => onClick(id ?? type ?? title)}
         />

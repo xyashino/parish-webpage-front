@@ -44,8 +44,8 @@ export const ParishOfficePage = () => {
           </p>
         </TextCard>
 
-        <TextCard className="w-full p-4 lg:w-4/5">
-          <h2 className="m-2 text-3xl font-bold">
+        <TextCard className="w-full lg:w-4/5 ">
+          <h2 className="m-2 text-xl font-bold">
             WYDAWANIE DOKUMENTÓW KANCELARYJNYCH:
           </h2>
           <p className="text-lg">

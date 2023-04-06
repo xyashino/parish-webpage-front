@@ -7,7 +7,7 @@ export const ArticleWrapper = () => {
   return (
     <>
       <BackgroundImage image={activeItem.image as string} />
-      <article className="prose-md prose text-black lg:prose-xl">
+      <article className="prose-md prose  text-black lg:prose-xl">
         {activeItem.article || null}
       </article>
     </>

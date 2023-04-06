@@ -7,7 +7,6 @@ export const NAVBAR_ITEMS_ORDER: PageRouter[] = [
   PageRouter.Gallery,
   PageRouter.Ministry,
   PageRouter.Parish,
-  PageRouter.Services,
   PageRouter.Contact,
 ];
 
@@ -36,26 +35,6 @@ const MAIN_MENU_DATA: [PageRouter, Page][] = [
     },
   ],
   [
-    PageRouter.Services,
-    {
-      name: "Nabożeństwa",
-      submenu: [
-        {
-          submenuRoute: PageRouter.Services,
-          submenuName: "Nabożeństwa - Msze św.",
-        },
-        {
-          submenuRoute: PageRouter.ServicesAdoration,
-          submenuName: "Adoracja Najświętszego Sakramentu",
-        },
-        {
-          submenuRoute: PageRouter.ServicesConfession,
-          submenuName: "Spowiedź św.",
-        },
-      ],
-    },
-  ],
-  [
     PageRouter.Parish,
     {
       name: "Parafia",
@@ -65,8 +44,8 @@ const MAIN_MENU_DATA: [PageRouter, Page][] = [
           submenuName: "Patron parafii",
         },
         {
-          submenuRoute: PageRouter.ParishHistory,
-          submenuName: "Historia",
+          submenuRoute: PageRouter.ParishServices,
+          submenuName: "Nabożeństwa - Msze św.",
         },
         {
           submenuRoute: PageRouter.ParishOffice,
@@ -79,10 +58,6 @@ const MAIN_MENU_DATA: [PageRouter, Page][] = [
         {
           submenuRoute: PageRouter.ParishPriests,
           submenuName: "Proboszczowie w historii parafii",
-        },
-        {
-          submenuRoute: PageRouter.ParishNationals,
-          submenuName: "Kapłani rodacy",
         },
       ],
     },

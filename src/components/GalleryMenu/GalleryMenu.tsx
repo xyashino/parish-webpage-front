@@ -4,18 +4,22 @@ import { GalleryMenuItem } from "@components/GalleryMenu/GalleryMenuItem";
 
 interface Props {
   data: AlbumTypeResponse[];
-  clickMethod: (id: string) => void | null;
   activeId: string;
+  onClick: (id: string) => void;
 }
 
-export const GalleryMenu = ({ data, activeId, clickMethod }: Props) => {
+export const GalleryMenu = ({ data, activeId, onClick }: Props) => {
+  const handleOnClick = (id: string) => {
+    onClick(id);
+  };
+
   return (
     <ul className="menu menu-horizontal w-full border-r-2 lg:menu-vertical">
       {data.map(({ id, name }) => (
         <GalleryMenuItem
           name={name}
           isActive={activeId === id}
-          clickMethod={() => clickMethod(id)}
+          onClick={() => handleOnClick(id)}
           key={id}
         />
       ))}

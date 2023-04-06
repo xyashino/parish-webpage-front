@@ -8,8 +8,12 @@ export const IntentionsTableRow = ({
 }: Omit<IntentionResponse, "id">) => {
   return (
     <tr>
-      <td className="border-r-1 text-center font-bold">{hour}</td>
-      <td className="prose whitespace-normal break-words">{parse(value)}</td>
+      <td className="border-r-1 text-center text-xs font-bold lg:text-lg">
+        {hour}
+      </td>
+      <td className="prose whitespace-normal break-words text-xs lg:text-lg">
+        {parse(value)}
+      </td>
     </tr>
   );
 };

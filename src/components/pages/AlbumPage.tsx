@@ -8,16 +8,23 @@ import { Modal } from "@components/ui/Modal/Modal";
 import { SliderContent } from "@components/Slider/SliderContent";
 import { ImgContainer } from "@components/ImgContainer";
 
+interface ActiveImage {
+  id: string;
+  url: string;
+}
+
 export const AlbumPage = () => {
   const data = useLoaderData() as Album;
   const { showModal, hideModal, displayModal } = useModal();
-  const [activeImg, setActiveImg] = useState(data.images[0]);
+  const [activeImg, setActiveImg] = useState<ActiveImage>(data.images[0]);
+
   const findActiveImageIndex = (id: string) => {
     return data.images.findIndex((el) => id === el.id);
   };
 
   const handleImgClick = (e: SyntheticEvent, id: string) => {
-    setActiveImg(data.images[findActiveImageIndex(id)]);
+    const newActiveImg = data.images[findActiveImageIndex(id)];
+    setActiveImg(newActiveImg);
     displayModal(e);
   };
 
@@ -41,6 +48,7 @@ export const AlbumPage = () => {
       <span className="font-bold uppercase text-error">żadnych</span> zdjęć.
     </h2>
   );
+
   return (
     <>
       <WhiteBoard className="flex min-h-[80vh] flex-col items-center pb-8">

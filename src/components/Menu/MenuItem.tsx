@@ -1,20 +1,27 @@
 import React from "react";
 
 interface Props {
-  active: boolean;
   title: string;
-  onClick: () => void;
+  isActive: boolean;
+  onClick?: () => void;
 }
 
-export const MenuItem = ({ title, active, onClick }: Props) => {
-  const activeClass = active ? "active" : "";
+export const MenuItem = ({ title, isActive, onClick }: Props) => {
+  const activeClass = isActive ? "active" : "";
+
+  const handleOnClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <li className="grow text-center">
       <button
         className={`w-full p-4 font-bold uppercase ${activeClass}`}
-        onClick={() => (onClick ? onClick() : undefined)}
+        onClick={handleOnClick}
       >
-        <p className="w-full text-center">{title}</p>
+        <p className="w-full text-center text-xs lg:text-lg">{title}</p>
       </button>
     </li>
   );

@@ -31,7 +31,7 @@ export const GalleryPage = () => {
     <WhiteBoard className="min-h-[80vh] lg:grid  lg:grid-cols-4">
       <GalleryMenu
         data={data}
-        clickMethod={changeActiveItem}
+        onClick={changeActiveItem}
         activeId={active.id}
       />
       <div className="col-span-3">

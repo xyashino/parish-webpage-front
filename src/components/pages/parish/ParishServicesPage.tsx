@@ -5,7 +5,7 @@ import { BackgroundImage } from "@components/ui/BackgroundImage";
 import Image from "@assets/nabozenstwa.webp";
 import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
 
-export const ServicesPage = () => {
+export const ParishServicesPage = () => {
   return (
     <WhiteBoard article>
       <BackgroundImage image={Image} />

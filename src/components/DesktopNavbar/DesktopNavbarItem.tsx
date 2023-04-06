@@ -9,27 +9,30 @@ import { useScrollTo } from "@hooks/useScrollTo";
 
 interface Props {
   router: PageRouter;
-  active?: true;
+  active?: boolean;
   onClick?: () => void;
   className?: string;
 }
+
 export const DesktopNavbarItem = ({ router, onClick, className }: Props) => {
   const { name, submenu } = MENU_DATA.get(router) as Page;
-  const optionalStyles = className ?? "";
+  const optionalStyles = className || "";
   const { scrollToElement } = useScrollTo("#root");
-  const clickMethod = () => {
+
+  const handleOnClick = () => {
     scrollToElement();
-    onClick ? onClick() : null;
+    if (onClick) onClick();
   };
 
   if (submenu) {
     return (
-      <li className={"dropdown-end font-bold normal-case" + optionalStyles}>
+      <li className={`dropdown-end font-bold normal-case ${optionalStyles}`}>
         <SubmenuContainer name={name}>
-          <SubmenuList submenu={submenu} onClick={clickMethod} />
+          <SubmenuList submenu={submenu} onClick={handleOnClick} />
         </SubmenuContainer>
       </li>
     );
   }
-  return <NavItem router={router} value={name} clickMethod={clickMethod} />;
+
+  return <NavItem router={router} value={name} clickMethod={handleOnClick} />;
 };

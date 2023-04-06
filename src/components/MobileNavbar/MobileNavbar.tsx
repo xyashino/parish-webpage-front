@@ -3,7 +3,7 @@ import { MenuLeft } from "@icons/MenuLeft";
 import { createPortal } from "react-dom";
 import { MobileNavbarList } from "@components/MobileNavbar/MobileNavbarList";
 
-const hideAndAnimateMenu = async (menu: HTMLUListElement, ms: number) => {
+const animateMenuHide = async (menu: HTMLUListElement, ms: number) => {
   menu
     .animate(
       [{ transform: "translateX(0%)" }, { transform: "translateX(100%)" }],
@@ -15,34 +15,34 @@ const hideAndAnimateMenu = async (menu: HTMLUListElement, ms: number) => {
 
 export const MobileNavbar = () => {
   const navBar = useRef<HTMLUListElement | null>(null);
-  const [showMenu, setShowMenu] = useState(false);
+  const [isMenuVisible, setMenuVisible] = useState(false);
   const portal = document.getElementById("popups");
-  const toggleMenu = async (show: boolean) => {
-    if (show) {
-      setShowMenu(show);
+  const toggleMenuVisibility = async (isVisible: boolean) => {
+    if (isVisible) {
+      setMenuVisible(isVisible);
       return;
     }
     const navbar = navBar.current;
     if (!navbar) return;
-    await hideAndAnimateMenu(navbar, 500);
-    setShowMenu(show);
+    await animateMenuHide(navbar, 500);
+    setMenuVisible(isVisible);
   };
-  const hideMenu = () => toggleMenu(false);
+  const hideMenu = () => toggleMenuVisibility(false);
 
   const menu = (
     <div className="fixed top-0 z-20 block grid h-screen w-screen grid-cols-3 overflow-y-scroll transition-transform lg:hidden">
-      <div className="sm:col-span-2" onClick={hideMenu} onFocus={hideMenu} />
+      <label className="sm:col-span-2" onClick={hideMenu} onFocus={hideMenu} />
       <MobileNavbarList hideMenu={hideMenu} ulRef={navBar} />
     </div>
   );
 
   return (
     <>
-      {showMenu ? (portal ? createPortal(menu, portal) : null) : null}
+      {isMenuVisible ? (portal ? createPortal(menu, portal) : null) : null}
       <div className="flex-none p-4 lg:hidden">
         <MenuLeft
-          className="btn-ghost inline-block h-8 w-8 stroke-current"
-          onClick={() => toggleMenu(true)}
+          className="btn-ghost inline-block h-12 w-12 stroke-current p-2"
+          onClick={() => toggleMenuVisibility(true)}
         />
       </div>
     </>

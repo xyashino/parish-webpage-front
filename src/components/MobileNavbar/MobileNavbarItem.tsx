@@ -13,14 +13,15 @@ interface Props {
   onClick?: () => void;
   className?: string;
 }
+
 export const MobileNavbarItem = ({ router, onClick, className }: Props) => {
   const optionalStyles = className ?? "";
   const { name, submenu } = MENU_DATA.get(router) as Page;
   const { scrollToElement } = useScrollTo("#root");
 
-  const clickMethod = () => {
+  const handleItemClick = () => {
     scrollToElement();
-    onClick ? onClick() : null;
+    onClick && onClick();
   };
 
   if (submenu) {
@@ -29,12 +30,12 @@ export const MobileNavbarItem = ({ router, onClick, className }: Props) => {
         <div className="collapse-arrow collapse relative flex flex-wrap p-0">
           <input type="checkbox" className="absolute top-0" />
           <SubmenuContainer name={name} isMobile>
-            <SubmenuList submenu={submenu} onClick={clickMethod} />
+            <SubmenuList submenu={submenu} onClick={handleItemClick} />
           </SubmenuContainer>
         </div>
       </li>
     );
   }
 
-  return <NavItem router={router} value={name} clickMethod={clickMethod} />;
+  return <NavItem router={router} value={name} clickMethod={handleItemClick} />;
 };

@@ -1,56 +1,66 @@
 import { BackgroundImgHeader } from "@components/ui/BackgroundImgHeader";
-import { InfoAlert } from "@components/InfoAlert";
 import React from "react";
+import { TextCard } from "@components/ui/TextCard";
 
 export const Caritas = () => {
   return (
     <>
       <BackgroundImgHeader title="Caritas" />
       <div className="p-4 p-2 text-left">
-        <blockquote>
-          Choruje ktoś wśród was? Niech sprowadzi kapłanów Kościoła, by się
-          modlili nad nim i namaścili go olejem w imię Pana. A modlitwa pełna
-          wiary będzie dla chorego ratunkiem i Pan go podźwignie, a jeśliby
-          popełnił grzechy, będą mu odpuszczone.
-        </blockquote>
+        <div className="text-center uppercase italic">
+          <h2>PARAFIALNY ODDZIAŁ CARITAS PRZY PARAFII MBNP W GRUSZOWIE</h2>
+          <p className="text-2xl font-bold text-error">
+            (pomoc potrzebującym i kuchnia dla ubogich)
+          </p>
+        </div>
+        <TextCard>
+          <h3 className="w-1/2 text-base-100">Biuro czynne:</h3>
+          <p>UL. KS. H. ARCZEWSKIEGO 1 (budynek katechetyczny, parter)</p>
+          <p>39-300 MIELEC</p>
+          <p>nr konta: 23 1240 2656 1111 0011 1636 9115</p>
+          <p>Opiekun: ks. Maciej Igielski</p>
+        </TextCard>
+        <h3 className="w-full text-center font-bold text-error">
+          1% NA CARITAS
+        </h3>
         <p>
-          Z Sakramentu Namaszczenia Chorych w naszej parafii można skorzystać z
-          okazji <span className="font-bold"> I Piątku miesiąca</span>, po
-          uprzednim zgłoszeniu chorego w kancelarii parafialnej.
+          W okresie od 1 stycznia do 30 kwietnia dokonujemy rozliczeń
+          podatkowych. Polskie prawo daje nam możliwość przekazania 1% naszego
+          podatku na rzecz wybranej przez nas organizacji pożytku publicznego.
         </p>
-
-        <InfoAlert className="w-full">
-          W nagłych przypadkach o każdej porze dnia i nocy, dzwoniąc na telefon
-          księdza dyżurnego 507 577 910 lub domofonem!
-        </InfoAlert>
-
         <p>
-          Sakramentu namaszczenia chorych udziela się osobom chorym, udającym
-          się na operację, będącym w podeszłym wieku, a także w ostatniej
-          godzinie życia. Tak jak pozostałe sakramenty, tak i sakrament
-          namaszczenia przeznaczony jest wyłącznie dla żyjących! Po stwierdzeniu
-          zgonu kapłan nie może go już udzielić.
+          Wielkość naszego podatku nie ulegnie zmianie – my jedynie decydujemy o
+          jego przeznaczeniu.
         </p>
-        <h2>
-          Na czas udzielania sakramentu chorych: spowiedzi, Komunii św. i
-          namaszczenia olejami św. w mieszkaniu chorego koniecznie należy
-          przygotować:
-        </h2>
-        <ul>
-          <li>stół nakryty białym obrusem;</li>
-          <li>postawić na nim krzyż, dwie świece;</li>
-          <li>naczynie z wodą święconą i kropidło;</li>
-          <li>
-            szklankę letniej, przegotowanej wody jeśli chory ma problemy z
-            przełykaniem;
-          </li>
-          <li>watę i talerzyk.</li>
-        </ul>
         <p>
-          Gdy kapłan przybędzie z sakramentami, należy zgromadzić wszystkich
-          obecnych na wspólną modlitwę. W czasie spowiedzi chorego wyjść do
-          innego pokoju i wspólnie odmawiać różaniec, koronkę do Bożego
-          miłosierdzia lub śpiewać religijne pieśni.
+          Zwracamy się zatem z serdeczną prośbą i apelem do wszystkich, którzy
+          składają zeznania podatkowe o przekazania 1% należnego podatku na cele
+          realizowane przez Caritas Diecezji Tarnowskiej.
+        </p>
+        <p>
+          Aby przekazać 1 % podatku za pośrednictwem Caritas Diecezji
+          Tarnowskiej na potrzeby Parafialnego Oddziału Caritas działającego w
+          naszej Parafii wystarczy tylko na zeznaniu podatkowym wpisać w
+          odpowiednim miejscu numer{" "}
+          <span className="font-bold text-error">KRS 0000211791</span> a w
+          rubryce{" "}
+          <span className="font-bold text-error">
+            “Cel szczegółowy 1 %” wpisać hasło „GRUSZÓW MBNP”.
+          </span>
+        </p>
+        <p>
+          Zachęcamy gorąco do skorzystania z niego oraz wsparcia w ten sposób
+          dzieł miłosierdzia prowadzonych przez nasz Parafialny Oddział Caritas.
+        </p>
+        <p className="w-full text-center font-bold text-accent">
+          WIĘCEJ INFORMACJI NA{" "}
+          <a
+            className="link font-bold text-error"
+            href="https://caritas.diecezja.tarnow.pl/index.php/pl/"
+          >
+            STRONIE INTERNETOWEJ
+          </a>{" "}
+          CARITAS DIECEZJI TARNOWSKIEJ:
         </p>
       </div>
     </>

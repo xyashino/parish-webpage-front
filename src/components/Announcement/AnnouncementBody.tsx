@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const AnnouncementBody = ({ announcements }: Props) => {
-  if (announcements.length === 0) {
+  if (!announcements || announcements.length === 0) {
     return (
       <p className="mb-12 text-xl">Upss!... Nie ma ustawionych ogłoszeń !!</p>
     );

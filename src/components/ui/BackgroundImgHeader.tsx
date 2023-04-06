@@ -11,7 +11,7 @@ export const BackgroundImgHeader = ({ title, children, divider }: Props) => {
     <>
       <div className="relative flex w-full flex-col items-center">
         <div className="w-full bg-primary p-6 font-bold text-base-100 shadow lg:w-4/5 lg:-translate-y-1/2">
-          <h2 className="text:2xl m-0 uppercase text-base-100 lg:text-3xl">
+          <h2 className="m-0  text-xl uppercase text-base-100 lg:text-3xl">
             {title}
           </h2>
           {children}
