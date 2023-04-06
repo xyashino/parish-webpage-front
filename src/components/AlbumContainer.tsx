@@ -14,7 +14,7 @@ export const AlbumContainer = ({ id }: Props) => {
   useLayoutEffect(() => {
     (async () => {
       setData(null);
-      setData(await getDataFrom(`/albums/types/${id}` as PageRouter));
+      setData(await getDataFrom(`${PageRouter.AlbumTypes}${id}` as PageRouter));
     })();
   }, [id]);
 

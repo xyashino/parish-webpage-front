@@ -1,6 +1,7 @@
 import React from "react";
 import { Album } from "@backendTypes";
 import { Link } from "react-router-dom";
+import { PageRouter } from "@enums/page-router.enum";
 
 const { VITE_GALLERY_URL } = import.meta.env;
 
@@ -22,7 +23,7 @@ export const AlbumCard = ({ title, subtitle, id, bgImg }: Props) => {
         <h2 className="card-title">{title}</h2>
         {subtitle ? <p>{subtitle}</p> : null}
         <div className="card-actions justify-end">
-          <Link to={`/album/${id}`} className="btn-primary btn">
+          <Link to={`${PageRouter.Album}${id}`} className="btn-primary btn">
             Zobacz Więcej
           </Link>
         </div>
