@@ -3,7 +3,10 @@ import { AlbumTypeResponse } from "@backendTypes";
 import { AlbumCard } from "@components/ui/AlbumCard";
 import { getDataFrom } from "@utils/network.util";
 import { PageRouter } from "@enums/page-router.enum";
+import { createRoot } from "react-dom/client";
 
+const loaderElement = document.getElementById("loader");
+const rootElement = createRoot(loaderElement as HTMLElement);
 interface Props {
   id: string;
 }
@@ -14,7 +17,12 @@ export const AlbumContainer = ({ id }: Props) => {
   useLayoutEffect(() => {
     (async () => {
       setData(null);
-      setData(await getDataFrom(`${PageRouter.AlbumTypes}${id}` as PageRouter));
+      setData(
+        await getDataFrom(
+          `${PageRouter.AlbumTypes}${id}` as PageRouter,
+          rootElement
+        )
+      );
     })();
   }, [id]);
 
