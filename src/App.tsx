@@ -19,6 +19,10 @@ import { NotFound } from "@components/pages/NotFound";
 import { GalleryPage } from "@components/pages/GalleryPage";
 import { AlbumPage } from "@components/pages/AlbumPage";
 import { ParishServicesPage } from "@components/pages/parish/ParishServicesPage";
+import { createRoot } from "react-dom/client";
+
+const loaderElement = document.getElementById("loader");
+const rootElement = createRoot(loaderElement as HTMLElement);
 
 const routers = createBrowserRouter([
   {
@@ -88,7 +92,7 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Intentions,
         element: <IntentionsPage />,
-        loader: () => getDataFrom(PageRouter.Intentions),
+        loader: () => getDataFrom(PageRouter.Intentions, rootElement),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Intentions,
         errorElement: <ErrorPage />,
@@ -96,7 +100,7 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Announcement,
         element: <AnnouncementPage />,
-        loader: () => getDataFrom(PageRouter.Announcement),
+        loader: () => getDataFrom(PageRouter.AnnouncementActive, rootElement),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Announcement,
         errorElement: <ErrorPage />,
@@ -104,7 +108,7 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Gallery,
         element: <GalleryPage />,
-        loader: () => getDataFrom(PageRouter.AlbumTypes),
+        loader: () => getDataFrom(PageRouter.AlbumTypes, rootElement),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Gallery,
       },
@@ -112,7 +116,10 @@ const routers = createBrowserRouter([
         path: PageRouter.OneAlbum,
         element: <AlbumPage />,
         loader: ({ params }) =>
-          getDataFrom(`${PageRouter.Album}${params.id}` as PageRouter),
+          getDataFrom(
+            `${PageRouter.Album}${params.id}` as PageRouter,
+            rootElement
+          ),
       },
     ],
   },
