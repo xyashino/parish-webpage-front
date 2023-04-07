@@ -17,12 +17,13 @@ export const enum PageRouter {
   //ALBUM
   Album = "/albums/",
   AlbumTypes = "/albums/types/",
-  OneAlbum = "/albums/:id/",
-
+  //ANNOUNCEMENTS
+  Announcement = "/announcements/",
+  AnnouncementActive = "/announcements?status=ACTIVE",
   //OTHERS
 
+  OneAlbum = "/albums/:id/",
   Main = "/",
-  Announcement = "/announcements/",
   Intentions = "/intentions/",
   Contact = "/contact/",
 

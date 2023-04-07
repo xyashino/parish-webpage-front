@@ -11,12 +11,12 @@ export const SliderContent = ({ imgUrl, onClick }: Props) => {
   const leftArrow = () => onClick(-1);
   const rightArrow = () => onClick(1);
   return (
-    <div className="select-none">
+    <div className="carousel select-none">
       <SliderArrow onClick={leftArrow} />
       <img
         src={VITE_GALLERY_URL + imgUrl}
         alt="Show in fullscreen"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 scale-75 object-contain"
+        className="carousel-item absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 scale-75 object-contain"
       />
       <SliderArrow onClick={rightArrow} right />
     </div>

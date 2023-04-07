@@ -11,7 +11,7 @@ export const BackgroundImage = ({ image, divider }: Props) => {
   return (
     <>
       <section
-        className={`max-w-screen relative flex h-[30vh] w-full  bg-cover bg-scroll bg-center lg:h-[65vh]  lg:bg-fixed`}
+        className={`max-w-screen relative flex h-[30vh] w-full  bg-cover bg-scroll bg-center lg:h-[60vh]  lg:bg-fixed`}
         style={{ backgroundImage: `url(${image ?? DefaultImage})` }}
       >
         <div className="absolute top-0 left-0 h-full w-full bg-black bg-opacity-40" />
