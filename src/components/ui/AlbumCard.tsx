@@ -15,7 +15,7 @@ interface Props {
 
 export const AlbumCard = ({ title, subtitle, id, bgImg }: Props) => {
   return (
-    <div className="max-w-5/6 card glass mb-8 w-96">
+    <div className="max-w-5/6 card glass mb-8 w-96" key={id}>
       <figure>
         <img src={VITE_GALLERY_URL + bgImg} alt="Album cover" />
       </figure>
