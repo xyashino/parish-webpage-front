@@ -1,4 +1,4 @@
-<p style="text-align: center">
+<p align="center">
   <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=Tech%20Stack&titleAlign=center&fontSize=24&lineCount=2&theme=react&gap=13&line1=react,react,61DAFB;typescript,typescript,3178C6;reactrouter,react%20router,CA4245;&line2=daisyui,daisyui,5A0EF8;tailwindcss,tailwind%20css,06B6D4" alt="Tech Stack"/>
 </p> 
 
@@ -22,7 +22,7 @@
 ## DEMO
 **YOU CAN ALWAYS CHECK THE APPLICATION [HERE](https://yashino.usermd.net/).**
 
-<p style="text-align: center">
+<p align="center">
   <img src="./demo/front.gif" alt="DEMO"/>
 </p> 
 ![DEMO](./demo/front.gif)
