@@ -23,9 +23,8 @@
 **YOU CAN ALWAYS CHECK THE APPLICATION [HERE](https://yashino.usermd.net/).**
 
 <p align="center">
-  <img src="./demo/front.gif" alt="DEMO"/>
+  <img src="demo/front.gif" alt="DEMO"/>
 </p> 
-![DEMO](./demo/front.gif)
 
 ## HOW TO DOWNLOAD THE REPOSITORY
 1. Clone the `PARISH-WEBPAGE-FRONT` repository to your computer.
