@@ -9,11 +9,7 @@ interface Props {
 export const MenuItem = ({ title, isActive, onClick }: Props) => {
   const activeClass = isActive ? "active" : "";
 
-  const handleOnClick = () => {
-    if (onClick) {
-      onClick();
-    }
-  };
+  const handleOnClick = () => onClick && onClick();
 
   return (
     <li className="grow text-center">

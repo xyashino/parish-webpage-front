@@ -15,6 +15,7 @@ export const ModalBackGround = ({ children, hideModal }: Props) => {
       className="fixed inset-0 z-40 flex flex-col items-center  bg-black/40  transition-all"
       onClick={handleClick}
       ref={modalRef}
+      aria-hidden="true"
     >
       {children}
     </div>

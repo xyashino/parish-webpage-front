@@ -5,7 +5,7 @@ import { Album } from "@backendTypes";
 interface Props {
   images: Album["images"];
 
-  onClick: (e: SyntheticEvent, id: string) => void | any;
+  onClick: (e: SyntheticEvent, id: string) => void;
 }
 const { VITE_GALLERY_URL } = import.meta.env;
 

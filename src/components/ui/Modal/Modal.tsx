@@ -1,10 +1,10 @@
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, SyntheticEvent } from "react";
 import { createPortal } from "react-dom";
 import { ModalBackGround } from "@components/ui/Modal/ModalBackground";
 
 interface Props extends PropsWithChildren {
   boxModalClasses?: string;
-  hideModal: (e: any) => void;
+  hideModal: (e: SyntheticEvent) => void;
   showModal: boolean;
 }
 

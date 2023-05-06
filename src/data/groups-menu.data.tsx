@@ -4,10 +4,11 @@ import RosaryImage from "@assets/groups/rozaniec.webp";
 import MariaImage from "@assets/groups/maryja.webp";
 import CaritasImage from "@assets/groups/caritas.webp";
 import AltarImage from "@assets/groups/oltarz.webp";
-import { AltarService } from "@components/articles/groups/AltarService";
-import { Rosary } from "@components/articles/groups/Rosary";
-import { MarianService } from "@components/articles/groups/MarianService";
-import { Caritas } from "@components/articles/groups/Caritas";
+import { AltarService } from "@articles/groups/AltarService";
+import { MarianService } from "@articles/groups/MarianService";
+import { Rosary } from "@articles/groups/Rosary";
+import { Caritas } from "@articles/groups/Caritas";
+
 export const GROUPS_MENU: MenuData[] = [
   {
     title: "Liturgiczna Służba Ołtarza",

@@ -20,6 +20,7 @@ export const ContactItem = ({ children, value, title }: Props) => {
       onClick={copyToClipboard}
       onKeyDown={copyToClipboard}
       data-tip="Skopiowano do schowka"
+      aria-hidden="true"
     >
       {children}
       <div className="col-span-2 flex flex-col">

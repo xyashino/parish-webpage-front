@@ -10,8 +10,8 @@ interface Props {
 export const SubmenuList = ({ submenu, onClick }: Props) => {
   return (
     <>
-      {submenu.map(({ submenuRoute, submenuName }) => (
-        <li key={submenuRoute}>
+      {submenu.map(({ submenuRoute, submenuName }, i) => (
+        <li key={`${submenuRoute}${submenuName}${i}`}>
           <Link to={submenuRoute} onClick={onClick}>
             {submenuName}
           </Link>

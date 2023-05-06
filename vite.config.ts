@@ -15,6 +15,7 @@ export default defineConfig({
       "@context": resolve(__dirname, "./src/context"),
       "@enums": resolve(__dirname, "./src/enums"),
       "@hooks": resolve(__dirname, "./src/hooks"),
+      "@articles": resolve(__dirname, "./src/articles"),
     },
   },
   plugins: [react()],

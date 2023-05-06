@@ -31,7 +31,12 @@ export const MobileNavbar = () => {
 
   const menu = (
     <div className="fixed top-0 z-20 block grid h-screen w-screen grid-cols-3 overflow-y-scroll transition-transform lg:hidden">
-      <label className="sm:col-span-2" onClick={hideMenu} onFocus={hideMenu} />
+      <div
+        className="sm:col-span-2"
+        onClick={hideMenu}
+        onFocus={hideMenu}
+        aria-hidden="true"
+      />
       <MobileNavbarList hideMenu={hideMenu} ulRef={navBar} />
     </div>
   );

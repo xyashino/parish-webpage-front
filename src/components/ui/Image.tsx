@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from "react";
 
 interface Props extends HTMLAttributes<HTMLImageElement> {
   src?: string;
-  alt?: string;
+  alt: string;
 }
 
 export const Image = ({ ...props }: Props) => {
