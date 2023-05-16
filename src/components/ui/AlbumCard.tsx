@@ -9,7 +9,6 @@ interface Props {
   title: Album["title"];
   subtitle: Album["subtitle"];
   bgImg: Album["backgroundImage"];
-
   id: Album["id"];
 }
 

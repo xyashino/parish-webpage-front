@@ -20,6 +20,7 @@ import { NotFound } from "@pages/NotFound";
 import { MainPage } from "@pages/MainPage";
 import { IntentionsPage } from "@pages/IntentionsPage";
 import { AnnouncementPage } from "@pages/AnnouncementPage";
+import { RequestPath } from "@enums/request-path.enum";
 
 const loaderElement = document.getElementById("loader");
 const rootElement = createRoot(loaderElement as HTMLElement);
@@ -92,7 +93,7 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Intentions,
         element: <IntentionsPage />,
-        loader: () => getDataFrom(PageRouter.Intentions, rootElement),
+        loader: () => getDataFrom(RequestPath.GetIntentions, rootElement),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Intentions,
         errorElement: <ErrorPage />,
@@ -100,7 +101,7 @@ const routers = createBrowserRouter([
       {
         path: PageRouter.Announcement,
         element: <AnnouncementPage />,
-        loader: () => getDataFrom(PageRouter.AnnouncementActive, rootElement),
+        loader: () => getDataFrom(RequestPath.GetAnnouncement, rootElement),
         shouldRevalidate: ({ currentUrl }) =>
           currentUrl.pathname !== PageRouter.Announcement,
         errorElement: <ErrorPage />,
@@ -117,10 +118,7 @@ const routers = createBrowserRouter([
         path: PageRouter.OneAlbum,
         element: <AlbumPage />,
         loader: ({ params }) =>
-          getDataFrom(
-            `${PageRouter.Album}${params.id}` as PageRouter,
-            rootElement
-          ),
+          getDataFrom(`${RequestPath.GetOneAlbum}${params.id}`, rootElement),
       },
     ],
   },

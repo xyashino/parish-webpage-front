@@ -11,7 +11,7 @@ export const InfoAlert = ({ children, className, ...props }: Props) => {
     <div className={localClass} {...props}>
       <div className="text-lg font-bold">
         <Info className="float-left w-auto text-4xl" />
-        <span className="w-5/6 p-2 text-sm lg:grow lg:text-lg">{children}</span>
+        <span className="grow p-2 text-sm lg:text-lg">{children}</span>
       </div>
     </div>
   );

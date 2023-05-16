@@ -20,7 +20,7 @@ export const Card = ({ children, src, alt, left }: Props) => {
   );
 
   return (
-    <div className="card w-5/6 bg-base-100 shadow-xl lg:w-4/5 lg:card-side">
+    <div className="card mt-2 w-5/6 bg-base-100 shadow-xl lg:w-4/5 lg:card-side">
       {left ? Img : null}
       <div className="card-body h-max items-center text-left">
         <article className="prose">{children}</article>

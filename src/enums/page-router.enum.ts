@@ -11,7 +11,6 @@ export const enum PageRouter {
   ParishOffice = "/parish/office/",
   ParishPriests = "/parish/priests-history/",
   ParishPatron = "/parish/patron/",
-  ParishNationals = "/parish/priests-nationals/",
   ParishServices = "/parish/services/",
 
   //ALBUM
@@ -19,7 +18,6 @@ export const enum PageRouter {
   AlbumTypes = "/albums/types/",
   //ANNOUNCEMENTS
   Announcement = "/announcements/",
-  AnnouncementActive = "/announcements?status=ACTIVE",
   //OTHERS
 
   OneAlbum = "/albums/:id/",

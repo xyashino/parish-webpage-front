@@ -27,7 +27,7 @@
       "@enums/*":  ["src/enums/*"],
       "@hooks/*":  ["src/hooks/*"],
       "@frontendTypes/*": ["src/types/*"],
-      "@backendTypes": ["./src/backendTypes/"],
+      "@backendTypes": ["../parish-webpage-backend/src/types/"],
       "@articles/*": ["src/articles/*"]
     },
   },

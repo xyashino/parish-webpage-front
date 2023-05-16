@@ -4,6 +4,7 @@ import { PageRouter } from "@enums/page-router.enum";
 import { redirect } from "react-router-dom";
 import { Loader } from "@components/ui/Loader";
 import { Root } from "react-dom/client";
+import { RequestPath } from "@enums/request-path.enum";
 
 export const HttpRequest = axios.create({
   baseURL: import.meta.env.VITE_API_URL ?? "http://localhost:3000",
@@ -13,7 +14,7 @@ export const HttpRequest = axios.create({
   withCredentials: true,
 });
 
-export const getDataFrom = async (path: PageRouter, root: Root) => {
+export const getDataFrom = async (path: RequestPath | string, root: Root) => {
   root.render(<Loader />);
   try {
     const response = await HttpRequest.get(path);

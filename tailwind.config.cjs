@@ -17,8 +17,10 @@ module.exports = {
       backgroundImage:{
         'bannerImage': `url('/src/assets/backgroundImage.png')`,
         'baptism': `url('/src/assets/baptism.jpg')`,
-        'bannerImage': `url('/src/assets/backgroundImage.png')`,
-
+      },
+      gridTemplateRows: {
+        "0fr": "0fr",
+        "1fr": "1fr",
       },
       height: {
         '1/3-vh': '33vh',
